@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ceramica Oristano — Museo della Ceramica</title>
+<meta name="description" content="Museo della ceramica di Oristano: brocche della sposa, fraschi, cantari e scolapasta dei figoli oristanesi, con descrizioni d'inventario e foto.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23241a12'/%3E%3Cpath d='M22 14h20v8c6 4 9 9 9 15 0 10-8 15-8 15H21s-8-5-8-15c0-6 3-11 9-15z' fill='%23b4552d'/%3E%3Ccircle cx='32' cy='42' r='5' fill='%234e7d46'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <div class="brand-mark">CO</div>
+      <div>
+        <h1>Ceramica Oristano <span>· Museo della Ceramica</span></h1>
+        <p>Brocche della sposa · Fraschi · Cantari · Scolapasta — la tradizione dei figoli oristanesi</p>
+      </div>
+    </div>
+    <div class="stats" id="stats">…</div>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <h2>Il museo della ceramica<br>di Oristano, oggetto per oggetto.</h2>
+    <p>Ogni scheda riunisce <strong>tutte le foto disponibili</strong> dell'oggetto — insieme, dettagli, fondi e scritte — con la <strong>descrizione originale del registro d'inventario</strong> (Comune di Oristano, coll. Clemente 1911 / Loria-Milano 1908) e una nota storica sulla tradizione dei <em>figoli</em>.</p>
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="Cerca per nome o inventario: es. 5213, gallo, frascu, Efisio…" autocomplete="off">
+      <select id="filtroCat"><option value="">Tutte le sale</option></select>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="hero-card">
+    <h3>Come è organizzato</h3>
+    <ol>
+      <li><strong>4 sale</strong> — brocche della sposa, uso quotidiano, acqua e cucina, dietro le quinte</li>
+      <li><strong>8 schede</strong> — una per oggetto d'inventario</li>
+      <li><strong>Micro-sezione foto</strong> — tutte le vedute dell'oggetto</li>
+    </ol>
+    <p class="nota">18 fotografie · descrizioni trascritte dal file «Ceramiche Oristano.xlsx» · attribuzioni da verificare dal vivo.</p>
+  </div>
+</section>
+
+<section class="wrap fascia">
+  <h2 class="sec">Oristano, città della ceramica</h2>
+  <p>Dal <strong>quartiere dei figoli</strong> — <em>su brugu de sos congiolargios</em>, attestato già nel Cinquecento — escono da secoli le invetriate verdi e gialle d'Oristano: argille locali, forni a legna, colature di vetrina. Accanto alle stoviglie d'uso (fraschi per l'acqua, cantari, scolapasta, pentole), i vasai realizzavano le <strong>produzioni straordinarie</strong>: le «brocche della sposa», capolavori di foggiatura e scultura con angeli, fiori a rilievo, beccucci multipli e corone traforate, donati in occasione delle nozze. Il nucleo qui schedato proviene dalle raccolte etnografiche di <strong>Gavino Clemente (ingresso 1911)</strong> e <strong>Loria / Musei di Milano (1908)</strong>, oggi confluite nei musei cittadini.</p>
+</section>
+
+<main class="wrap">
+  <section id="categorie"><h2 class="sec">Le sale</h2><div class="car-wrap"><button class="car-btn prev" id="carPrev" aria-label="Categorie precedenti">‹</button><div class="grid-cat" id="gridCat"></div><button class="car-btn next" id="carNext" aria-label="Categorie successive">›</button></div></section>
+  <section id="oggetti"><h2 class="sec">Gli oggetti <span id="conteggio"></span></h2><div class="grid-obj" id="gridObj"></div></section>
+</main>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <button class="x" id="chiudi" aria-label="Chiudi">✕</button>
+    <div class="scheda" id="scheda"></div>
+  </div>
+</div>
+
+<footer><div class="wrap foot">
+  <p><strong>Ceramica Oristano — Museo della Ceramica.</strong> Schede a scopo espositivo e documentativo. Le descrizioni d'inventario sono trascritte dal registro comunale; le attribuzioni storiche vanno verificate dal vivo.</p>
+  <p class="piccolo">18 fotografie · 8 schede · inventario 5206–5343 (coll. Clemente 1911, Loria/Milano 1908) · Comune di Oristano.</p>
+  <p class="piccolo">Fonti storiche: Oristano Turismo «Oristano Città della Ceramica»; Google Arts &amp; Culture «Le Ceramiche di Oristano»; Antiquarium Arborense; voce «Gavino Clemente» (collezione etnografica). Foto e trascrizioni dal materiale fornito dal Comune.</p>
+</div></footer>
+
+<script src="catalog.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
