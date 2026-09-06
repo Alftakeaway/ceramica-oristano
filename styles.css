@@ -314,7 +314,7 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:#0c0906}
 .piccolo{font-size:12.5px;color:var(--faint);font-style:normal;font-family:var(--sans);letter-spacing:.03em}
 .firma{
   margin:14px 0 0;padding-top:14px;border-top:1px solid var(--line-soft);
-  font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);
+  font-family:var(--sans);font-size:14.5px;font-weight:700;letter-spacing:.04em;color:var(--bone);
 }
 .firma a{color:var(--bronze-hi);text-decoration:none;letter-spacing:.06em}
 .firma a:hover{text-decoration:underline}
