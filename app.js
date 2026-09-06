@@ -200,7 +200,8 @@ function initMappa(){
   const el = document.getElementById('mappa'); if(!el) return;
   if(!window.L){ el.innerHTML = '<p class="nota">Mappa non disponibile: controlla la connessione.</p>'; return; }
   const m = L.map('mappa', { scrollWheelZoom: false }).setView([39.9048, 8.6040], 13);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 19, attribution: '© OpenStreetMap contributors © CARTO' }).addTo(m);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri, OpenStreetMap contributors' }).addTo(m);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19 }).addTo(m);
   [
     ['Via Figoli', 39.9066616, 8.5968085, 'Forni, case e botteghe dei figoli.'],
     ['Antiquarium Arborense', 39.9044811, 8.5927257, 'Reperti dal Neolitico al Novecento.'],
