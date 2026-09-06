@@ -257,6 +257,16 @@ figcaption a{color:var(--bronze-hi)}
 }
 .cod.big{font-size:14px;padding:3px 11px}
 .meta{font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--mut)}
+/* stato vuoto della ricerca */
+.vuoto{grid-column:1/-1;text-align:center;border:1px dashed var(--line);border-radius:4px;padding:36px 22px}
+.vuoto p{font-family:var(--display);font-size:22px;font-style:italic;color:var(--perg);margin:0 0 16px}
+.vuoto .btn{max-width:300px;width:100%;margin:0 auto}
+/* contatore foto in scheda */
+.main{position:relative}
+.conta{
+  position:absolute;right:10px;bottom:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;
+  background:rgba(10,8,6,.82);border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--bone);
+}
 /* bottone-targa in bronzo */
 .btn{
   font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
@@ -340,4 +350,21 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:#0c0906}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .cat,.obj,.btn,.car-btn,.chip{transition:none}
+}
+
+/* ---------- stampa: catalogo pulito su carta ---------- */
+@media print{
+  @page{margin:15mm}
+  body{background:#fff;color:#111;font-size:12pt}
+  body::before,body::after{display:none !important}
+  .topbar,.commandbar,.meandro,.chips,.rail-nav,.topnav,.thumbs,.x,.btn,.conta,.firma,.mestiere,.hero-card,.modal{display:none !important}
+  .wrap{max-width:none}
+  .hero{display:block;padding:0}
+  .hero-text h2,.sec{color:#111}
+  .kicker,.sec-over,.badge,.meta,.sott{color:#444}
+  .sec-row{border-color:#999}
+  .obj,.cat,.blocco,.hero-card{break-inside:avoid;border-color:#999;background:#fff}
+  .obj img,.cat img,.main img,.fig-storia img{filter:none;max-height:60mm}
+  a{color:#111;text-decoration:none}
+  .storia-grid{display:block}
 }

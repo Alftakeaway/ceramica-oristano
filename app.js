@@ -64,6 +64,11 @@ function renderOggetti(){
   const g = $('#gridObj'); const list = filtrati();
   $('#conteggio').textContent = `— ${list.length} schede`;
   g.innerHTML = '';
+  if(!list.length){
+    g.innerHTML = `<div class="vuoto"><p>Nessuna scheda trovata per questa ricerca.</p><button class="btn" id="azzera">Azzera i filtri</button></div>`;
+    $('#azzera').onclick = () => { filtroCat = ''; query = ''; $('#q').value = ''; syncFiltri(); };
+    return;
+  }
   list.forEach(o => {
     const cat = C.categorie[o.categoria];
     const d = document.createElement('div'); d.className = 'obj';
@@ -74,6 +79,20 @@ function renderOggetti(){
   });
 }
 let corrente = null, idxFoto = 0;
+function bindMain(){ const m = $('#mainImg'); if(m) m.onclick = () => window.open(m.src, '_blank'); }
+function mostraFoto(i){
+  const o = corrente; if(!o) return;
+  idxFoto = (i + o.foto.length) % o.foto.length;
+  const box = $('#mainBox'); if(!box) return;
+  box.innerHTML = `<img id="mainImg" src="${enc(o.foto[idxFoto])}">`;
+  document.querySelectorAll('#thumbs [data-i]').forEach(x => x.classList.toggle('on', +x.dataset.i === idxFoto));
+  const c = $('#contaFoto'); if(c) c.textContent = `${idxFoto + 1} / ${o.foto.length}`;
+  bindMain();
+}
+function chiudiScheda(){
+  $('#modal').classList.remove('open');
+  try{ history.replaceState(null, '', location.pathname); }catch(_){}
+}
 function apri(id){
   const o = C.oggetti.find(x => x.id === id); if(!o) return;
   corrente = o; idxFoto = 0;
@@ -82,7 +101,7 @@ function apri(id){
   $('#scheda').innerHTML = `
     <h2><span class="cod big">${o.codice || ''}</span> ${o.titolo}</h2>
     <div class="sott"><span class="badge">${cat.titolo}</span> · ${etichettaMedia(o)} in questa micro-sezione · vedute: ${tipi} · inv. <strong>${o.info.inventario}</strong></div>
-    <div class="gal"><div class="main" id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}"></div>
+    <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}"></div><div class="conta" id="contaFoto"></div></div>
     <div class="thumbs" id="thumbs">${o.foto.map((f, i) => `<img data-i="${i}" class="${i === 0 ? 'on' : ''}" loading="lazy" src="${enc(f)}" title="${fotoTipo(f)} — ${f}">`).join('')}</div></div>
     <div class="blocchi">
       <div class="blocco registro lungo"><h4>Descrizione d'inventario — registro comunale (trascrizione fedele)</h4><p class="cit">«${o.info.soggetto}»</p><p><span class="badge inv">inv. ${o.info.inventario}</span> <span class="badge">${o.info.oggetto}</span> <span class="badge">${o.info.materia}</span> <span class="badge">ingresso ${o.info.data_ingresso}</span> <span class="badge">racc. ${o.info.autore}</span></p></div>
@@ -90,18 +109,20 @@ function apri(id){
       <div class="blocco"><h4>Dettagli da osservare</h4><p>${o.info.dettagli}</p><h4>Le foto di questa scheda</h4><ul>${o.foto.map(f => `<li><strong>${fotoTipo(f)}</strong> — ${f}</li>`).join('')}</ul></div>
       <div class="blocco"><h4>Nota di catalogo</h4><p>Scheda compilata incrociando le foto con il file «Ceramiche Oristano.xlsx» (inventari 5206–5343 e oltre). Le foto mostrano spesso più pezzi insieme: l'attribuzione all'inventario segue la descrizione più vicina per forma, vetrina e scritte visibili (es. «5313» sul fondo dello scolapasta, «EFISIO» sul cantaro). Verificare dal vivo misure, marchi e stato conservativo.</p></div>
     </div>`;
-  document.querySelectorAll('#thumbs [data-i]').forEach(im => im.onclick = () => {
-    idxFoto = +im.dataset.i;
-    $('#mainBox').innerHTML = `<img id="mainImg" src="${enc(o.foto[idxFoto])}">`;
-    document.querySelectorAll('#thumbs [data-i]').forEach(x => x.classList.remove('on')); im.classList.add('on'); bindMain();
-  });
-  bindMain();
-  function bindMain(){ const m = $('#mainImg'); if(m) m.onclick = () => window.open(m.src, '_blank'); }
+  document.querySelectorAll('#thumbs [data-i]').forEach(im => im.onclick = () => mostraFoto(+im.dataset.i));
+  mostraFoto(0);
   $('#modal').classList.add('open'); $('#modal').setAttribute('aria-hidden', 'false');
+  try{ history.replaceState(null, '', '#scheda-' + o.id); }catch(_){}
 }
-$('#chiudi').onclick = () => { $('#modal').classList.remove('open'); };
-$('#modal').addEventListener('click', e => { if(e.target.id === 'modal') $('#modal').classList.remove('open'); });
-document.addEventListener('keydown', e => { if(e.key === 'Escape') $('#modal').classList.remove('open'); });
+$('#chiudi').onclick = () => chiudiScheda();
+$('#modal').addEventListener('click', e => { if(e.target.id === 'modal') chiudiScheda(); });
+document.addEventListener('keydown', e => {
+  const aperta = $('#modal').classList.contains('open');
+  if(e.key === 'Escape'){ if(aperta) chiudiScheda(); return; }
+  if(!aperta || !corrente) return;
+  if(e.key === 'ArrowRight') mostraFoto(idxFoto + 1);
+  if(e.key === 'ArrowLeft') mostraFoto(idxFoto - 1);
+});
 $('#q').addEventListener('input', e => { query = e.target.value; renderOggetti(); });
 
 let carTimer = null;
@@ -124,4 +145,6 @@ function initCarousel(){
   const nf = C.totaleFoto, no = C.oggetti.length, nc = Object.keys(C.categorie).length;
   $('#stats').textContent = `${nc} sale · ${no} schede · ${nf} foto`;
   renderChips(); renderCategorie(); initCarousel(); renderOggetti();
+  const h = (location.hash || '').replace(/^#scheda-/, '');
+  if(h && C.oggetti.some(x => x.id === h)) apri(h);
 })();
