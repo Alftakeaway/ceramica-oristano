@@ -180,12 +180,12 @@ figcaption a{color:var(--bronze-hi)}
 .fig-mestiere img{aspect-ratio:4/4.6;object-fit:cover}
 .mestiere-tx .sec{margin:6px 0 10px}
 .mestiere-tx p:last-child{font-size:17px;color:var(--bone);margin:0;max-width:62ch}
-.storia-grid p:last-child{margin:0;font-size:17.5px;max-width:70ch;color:var(--bone)}
-.storia-grid > p:first-of-type::first-letter{
+.storia-tx > p{margin:0 0 14px;font-size:17.5px;max-width:70ch;color:var(--bone)}
+.storia-tx > p:last-child{margin-bottom:0}
+.storia-tx > p:first-of-type::first-letter{
   font-family:var(--display);font-weight:700;font-size:3.1em;float:left;
   line-height:.82;padding:4px 10px 0 0;color:var(--terra);
 }
-.storia-grid > p{margin:0 0 14px}
 .fonti-storia{
   font-family:var(--sans);font-size:12px !important;letter-spacing:.06em;color:var(--faint) !important;
   border-top:1px solid var(--line-soft);padding-top:10px;
