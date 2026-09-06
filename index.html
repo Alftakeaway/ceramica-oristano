@@ -38,6 +38,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 <a class="salta" href="#oggetti">Salta alle schede</a>
@@ -51,9 +52,11 @@
       </div>
     </div>
     <nav class="topnav" aria-label="Sezioni della pagina">
+      <a href="#percorsi">Percorsi</a>
       <a href="#sale">Sale</a>
       <a href="#oggetti">Oggetti</a>
       <a href="#storia">Storia</a>
+      <a href="#mappa-sez">Mappa</a>
     </nav>
     <div class="stats" id="stats">…</div>
   </div>
@@ -63,6 +66,13 @@
     </label>
     <label class="cmd cmd-s">Sala
       <select id="filtroCat"><option value="">Tutte le sale</option></select>
+    </label>
+    <label class="cmd cmd-s">Raccolta
+      <select id="filtroRac">
+        <option value="">Entrambe le raccolte</option>
+        <option value="Clemente">Clemente · 1911</option>
+        <option value="Loria">Loria / Milano · 1908</option>
+      </select>
     </label>
   </div>
 </header>
@@ -116,6 +126,43 @@
   </div>
 </section>
 
+<section class="wrap percorsi" id="percorsi" aria-labelledby="tit-perc">
+  <div class="sec-row">
+    <div class="sec-head">
+      <p class="sec-over">Storie trasversali alle sale</p>
+      <h2 class="sec" id="tit-perc">Percorsi tematici</h2>
+    </div>
+  </div>
+  <div class="perc-grid">
+    <article class="perc">
+      <h3>La brocca della sposa: dono e parata</h3>
+      <p>Dal fidanzamento alla tavola nuziale: anfore a quattro manici con beccucci, angeli e corone traforate, più da parata che da uso.</p>
+      <ol>
+        <li><a href="#scheda-brocca-4manici-angeli-5213">CO001 — Brocca a 4 manici con angeli</a></li>
+        <li><a href="#scheda-brocca-4anse-angioletto-5254">CO007 — Brocca a 4 anse con angioletto</a></li>
+      </ol>
+    </article>
+    <article class="perc">
+      <h3>L'acqua e la tavola: il quotidiano</h3>
+      <p>Borracce da viaggio, orci con rubinetto, scolapasta e caraffe incise: la cucina oristanese in terracotta invetriata solo dove serve.</p>
+      <ol>
+        <li><a href="#scheda-frascu-schiacciato-5280">CO004 — Frascu da viaggio</a></li>
+        <li><a href="#scheda-cantaro-efisio-5316">CO006 — Cantaro Efisio</a></li>
+        <li><a href="#scheda-scolapasta-5313">CO003 — Scolapasta 5313</a></li>
+        <li><a href="#scheda-brocca-fregi-incisi-5240">CO005 — Brocca a fregi incisi</a></li>
+      </ol>
+    </article>
+    <article class="perc">
+      <h3>Dietro le quinte: il mestiere</h3>
+      <p>Depositi, scaffali e cartellini: come il museo custodisce la collezione Clemente e Loria, tra buste, scaffali e numeri di magazzino.</p>
+      <ol>
+        <li><a href="#scheda-deposito-scaffali-sardegna">CO008 — Il deposito</a></li>
+        <li><a href="#scheda-brocca-gallo-5230">CO002 — Brocca-gallo seriale</a></li>
+      </ol>
+    </article>
+  </div>
+</section>
+
 <main class="wrap">
   <section id="sale" aria-labelledby="tit-sale">
     <div class="sec-row">
@@ -142,6 +189,85 @@
   </section>
 </main>
 
+<section class="wrap racconto" aria-label="Approfondimenti">
+  <div class="sec-row">
+    <div class="sec-head">
+      <p class="sec-over">Dal Tirso alla vetrina</p>
+      <h2 class="sec">Il viaggio dell'argilla</h2>
+    </div>
+  </div>
+  <ol class="passi">
+    <li><strong>Cava</strong><span>Argille in riva al Tirso, come per i tegolai di Silì.</span></li>
+    <li><strong>Foggiatura</strong><span>Al tornio: «tirare l'argilla» per renderla leggera.</span></li>
+    <li><strong>Essiccazione</strong><span>Al sole, prima della prima cottura.</span></li>
+    <li><strong>Cottura</strong><span>Nel forno a legna: nasce il biscotto.</span></li>
+    <li><strong>Vetrina</strong><span>Ingobbio bianco e colature verdi e gialle.</span></li>
+  </ol>
+
+  <div class="sec-row">
+    <div class="sec-head">
+      <p class="sec-over">Parole del mestiere</p>
+      <h2 class="sec">Glossario</h2>
+    </div>
+  </div>
+  <dl class="gloss">
+    <div><dt>Figolo</dt><dd>Vasaio di Oristano; dal quartiere <em>su brugu de sos congiolargios</em>.</dd></div>
+    <div><dt>Congiolargio</dt><dd>Ceramista; voce in uso dal XV secolo, dal castigliano.</dd></div>
+    <div><dt>Alfarero</dt><dd>Vasaio; dallo Statuto degli Alfareros del 1692.</dd></div>
+    <div><dt>Gremio</dt><dd>Corporazione di mestiere dei figoli, con statuto e gonfaloni.</dd></div>
+    <div><dt>Pintada</dt><dd>Brocca a chiazze verdi e gialle, il pezzo più prestigioso.</dd></div>
+    <div><dt>Frascu</dt><dd>Borraccia ovoidale schiacciata, da viaggio.</dd></div>
+    <div><dt>Cantaro</dt><dd>Orcio da acqua, anche con rubinetto di legno.</dd></div>
+    <div><dt>Stangiu</dt><dd>Coperta di ingobbio e vetrina dei reperti più antichi.</dd></div>
+    <div><dt>Ingobbio</dt><dd>Sottile strato di argilla bianca sotto la vetrina.</dd></div>
+    <div><dt>Vetrina</dt><dd>Coperta vetrosa che impermeabilizza la terracotta.</dd></div>
+    <div><dt>Slip-ware</dt><dd>Decoro tracciato con argilla bianca sul pezzo.</dd></div>
+    <div><dt>Biscotto</dt><dd>Terracotta alla prima cottura, non ancora invetriata.</dd></div>
+  </dl>
+
+  <div class="due-col">
+    <div>
+      <div class="sec-row">
+        <div class="sec-head">
+          <p class="sec-over">Guida alla lettura</p>
+          <h2 class="sec">Come leggere una scheda</h2>
+        </div>
+      </div>
+      <ol class="guida">
+        <li><strong>Codice e inventario</strong> — CO001 è la sigla di mostra, 5213 il numero del registro comunale.</li>
+        <li><strong>Registro</strong> — la citazione è trascritta fedelmente, con le parole dell'epoca.</li>
+        <li><strong>Micro-sezione foto</strong> — vedute d'insieme, particolari, fondi e scritte: ogni tipo è etichettato.</li>
+        <li><strong>Verifica dal vivo</strong> — misure, marchi e stato vanno sempre confermati in museo.</li>
+      </ol>
+    </div>
+    <div>
+      <div class="sec-row">
+        <div class="sec-head">
+          <p class="sec-over">Oltre queste sale</p>
+          <h2 class="sec">Territorio vivo</h2>
+        </div>
+      </div>
+      <ul class="terr">
+        <li><a href="https://comune.oristano.it/it/vivere-il-comune/citta-di-oristano/tradizione-identita-innovazione-e-creativita/" target="_blank" rel="noopener">Centro Terracotta e Ecomuseo</a> — documenti, mostre e memoria dei figoli.</li>
+        <li><a href="https://www.buongiornoceramica.it/city/oristano/" target="_blank" rel="noopener">Oristano Città della Ceramica (AiCC)</a> — Tornio di Via Figoli e Buongiorno Ceramica.</li>
+        <li><a href="https://www.antiquariumarborense.it/" target="_blank" rel="noopener">Antiquarium Arborense</a> — reperti dal Neolitico al Novecento.</li>
+        <li><a href="https://artsandculture.google.com/exhibit/le-ceramiche-di-oristano/gQGRb7g4?hl=it" target="_blank" rel="noopener">Le Ceramiche di Oristano</a> — mostra su Google Arts &amp; Culture.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap mappa-sez" id="mappa-sez" aria-labelledby="tit-mappa">
+  <div class="sec-row">
+    <div class="sec-head">
+      <p class="sec-over">Su brugu de sos congiolargios</p>
+      <h2 class="sec" id="tit-mappa">Il quartiere dei figoli</h2>
+    </div>
+  </div>
+  <div class="mappa-wrap"><div id="mappa" role="img" aria-label="Mappa del quartiere dei figoli: Via Figoli, Antiquarium, Centro Terracotta, Piazza Eleonora e rive del Tirso"></div></div>
+  <p class="nota">Forni e botteghe in Via Figoli, reperti all'Antiquarium, documenti al Centro Terracotta, ceramiche a cielo aperto in Piazza Eleonora, argilla dalle rive del Tirso. Posizioni da OpenStreetMap; quella del Tirso è indicativa.</p>
+</section>
+
 <div class="modal" id="modal" aria-hidden="true">
   <div class="modal-box" role="dialog" aria-modal="true" aria-label="Scheda oggetto">
     <button class="x" id="chiudi" aria-label="Chiudi scheda">✕</button>
@@ -159,6 +285,7 @@
   <p class="firma">Designed &amp; Developed by <a href="mailto:alfredoforte.web@gmail.com">alfredoforte.web@gmail.com</a></p>
 </div></footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="catalog.js"></script>
 <script src="app.js"></script>
 </body>
