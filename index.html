@@ -8,6 +8,9 @@
 <meta name="description" content="Museo della ceramica di Oristano: brocche della sposa, fraschi, cantari e scolapasta dei figoli oristanesi, con descrizioni d'inventario e foto.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23241a12'/%3E%3Cpath d='M22 14h20v8c6 4 9 9 9 15 0 10-8 15-8 15H21s-8-5-8-15c0-6 3-11 9-15z' fill='%23b4552d'/%3E%3Ccircle cx='32' cy='42' r='5' fill='%234e7d46'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="topbar">
@@ -35,6 +38,7 @@
     </label>
   </div>
 </header>
+<div class="meandro" aria-hidden="true"></div>
 
 <section class="hero wrap">
   <div class="hero-text">
@@ -65,7 +69,10 @@
 <main class="wrap">
   <section id="sale" aria-labelledby="tit-sale">
     <div class="sec-row">
-      <h2 class="sec" id="tit-sale">Le sale</h2>
+      <div class="sec-head">
+        <p class="sec-over">Percorso espositivo · sale I–IV</p>
+        <h2 class="sec" id="tit-sale">Le sale</h2>
+      </div>
       <div class="rail-nav">
         <button class="car-btn prev" id="carPrev" aria-label="Sale precedenti">‹</button>
         <button class="car-btn next" id="carNext" aria-label="Sale successive">›</button>
@@ -75,7 +82,10 @@
   </section>
   <section id="oggetti" aria-labelledby="tit-ogg">
     <div class="sec-row">
-      <h2 class="sec" id="tit-ogg">Gli oggetti <span id="conteggio"></span></h2>
+      <div class="sec-head">
+        <p class="sec-over">Catalogo ragionato · inv. 5206–5343</p>
+        <h2 class="sec" id="tit-ogg">Gli oggetti <span id="conteggio"></span></h2>
+      </div>
       <p class="sec-hint">Apri una scheda per la micro-sezione foto.</p>
     </div>
     <div class="grid-obj" id="gridObj"></div>
@@ -89,6 +99,7 @@
   </div>
 </div>
 
+<div class="meandro" aria-hidden="true"></div>
 <footer><div class="wrap foot">
   <div class="foot-main">
     <p><strong>Ceramica Oristano — Museo della Ceramica.</strong> Schede a scopo espositivo e documentativo. Le descrizioni d'inventario sono trascritte dal registro comunale; le attribuzioni storiche vanno verificate dal vivo.</p>
