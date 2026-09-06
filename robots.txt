@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ceramica-oristano.vercel.app/sitemap.xml

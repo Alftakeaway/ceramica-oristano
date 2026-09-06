@@ -78,7 +78,7 @@ function renderOggetti(){
     g.appendChild(d);
   });
 }
-let corrente = null, idxFoto = 0;
+let corrente = null, idxFoto = 0, ultimoFuoco = null;
 function bindMain(){ const m = $('#mainImg'); if(m) m.onclick = () => window.open(m.src, '_blank'); }
 function mostraFoto(i){
   const o = corrente; if(!o) return;
@@ -92,6 +92,7 @@ function mostraFoto(i){
 function chiudiScheda(){
   $('#modal').classList.remove('open');
   try{ history.replaceState(null, '', location.pathname); }catch(_){}
+  if(ultimoFuoco && ultimoFuoco.focus) ultimoFuoco.focus();
 }
 function apri(id){
   const o = C.oggetti.find(x => x.id === id); if(!o) return;
@@ -111,7 +112,9 @@ function apri(id){
     </div>`;
   document.querySelectorAll('#thumbs [data-i]').forEach(im => im.onclick = () => mostraFoto(+im.dataset.i));
   mostraFoto(0);
+  ultimoFuoco = document.activeElement;
   $('#modal').classList.add('open'); $('#modal').setAttribute('aria-hidden', 'false');
+  $('#chiudi').focus();
   try{ history.replaceState(null, '', '#scheda-' + o.id); }catch(_){}
 }
 $('#chiudi').onclick = () => chiudiScheda();
@@ -120,6 +123,14 @@ document.addEventListener('keydown', e => {
   const aperta = $('#modal').classList.contains('open');
   if(e.key === 'Escape'){ if(aperta) chiudiScheda(); return; }
   if(!aperta || !corrente) return;
+  if(e.key === 'Tab'){
+    const f = [...document.querySelectorAll('#modal .modal-box button, #modal .modal-box a[href]')].filter(el => !el.disabled && el.offsetParent !== null);
+    if(!f.length) return;
+    const primo = f[0], ultimo = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === primo){ ultimo.focus(); e.preventDefault(); }
+    else if(!e.shiftKey && document.activeElement === ultimo){ primo.focus(); e.preventDefault(); }
+    return;
+  }
   if(e.key === 'ArrowRight') mostraFoto(idxFoto + 1);
   if(e.key === 'ArrowLeft') mostraFoto(idxFoto - 1);
 });
@@ -127,7 +138,7 @@ $('#q').addEventListener('input', e => { query = e.target.value; renderOggetti()
 
 let carTimer = null;
 function carStep(){ const g = $('#gridCat'); const card = g.querySelector('.cat'); if(!card) return; const w = card.offsetWidth + 14; if(g.scrollLeft + g.clientWidth >= g.scrollWidth - 12){ g.scrollTo({ left: 0, behavior: 'smooth' }); } else { g.scrollBy({ left: w, behavior: 'smooth' }); } }
-function carPlay(){ carStop(); carTimer = setInterval(carStep, 4000); }
+function carPlay(){ carStop(); if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return; carTimer = setInterval(carStep, 4000); }
 function carStop(){ if(carTimer){ clearInterval(carTimer); carTimer = null; } }
 function initCarousel(){
   const g = $('#gridCat'), wrap = g.closest('.car-wrap');
