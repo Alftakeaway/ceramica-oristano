@@ -6,7 +6,9 @@ const CONTESTI = {
  'brocche-spose': 'Le «brocche della sposa» sono il vertice dei figoli oristanesi (su brugu de sos congiolargios, dal XVI secolo): anfore a 4 manici con beccucci, angeli, fiori e corone traforate, invetriate in verde con colature gialle. Dono nuziale, più da parata che da uso.',
  'uso-quotidiano': 'Stoviglie da mensa e da trasporto dei figoli: terracotta ingobbiata, decorazioni impresse a rotella (onde, ovoli, rosette), vetrina giallo-verde solo dove serve. Forme zoomorfe (gallo) e schiacciate da viaggio (frascu).',
  'acqua-cucina': 'Cantari con rubinetto, scolapasta e vasi per grassi: la cucina in terracotta. Interno ingobbiato e invetriato in verde, esterno spesso in biscotto; scritte devozionali (EFISIO) e numeri di magazzino dipinti.',
- 'dietro-quinte': 'Depositi e vetrine: scaffali «129 Sardegna», buste di conservazione, cartellini 52xx–53xx. Collezioni Clemente (1911) e Loria/Milano (1908) dei musei oristanesi.'
+ 'dietro-quinte': 'Depositi e vetrine: scaffali «129 Sardegna», buste di conservazione, cartellini 52xx–53xx. Collezioni Clemente (1911) e Loria/Milano (1908) dei musei oristanesi.',
+ 'figure': 'Cavalli con fantoccio in ceramica invetriata: la tradizione del «Su Cavalluccio» oristanese, figura equestre propiziatoria un tempo collocata sui crinali dei tetti e nelle case. Serie 5206–5210, coll. Clemente 1911.',
+ 'casa-focolare': 'Fumaioli da camino in biscotto di terracotta, dal torrino conico forato al grande fumaiolo figurato: la ceramica oristanese oltre la mensa, sui tetti della città.'
 };
 
 function fotoTipo(nome){
@@ -56,7 +58,7 @@ function filtrati(){
   const q = query.trim().toLowerCase();
   return C.oggetti.filter(o => {
     if(filtroCat && o.categoria !== filtroCat) return false;
-    if(filtroRac && (o.info.autore || '') !== filtroRac) return false;
+    if(filtroRac && !(o.info.autore || '').includes(filtroRac)) return false;
     if(q){
       const hay = (o.titolo + ' ' + o.chiave + ' ' + (o.codice || '') + ' ' + ((o.info && o.info.inventario) || '') + ' ' + ((o.info && o.info.soggetto) || '') + ' ' + ((o.info && o.info.descrizione) || '') + ' ' + ((o.info && o.info.dettagli) || '')).toLowerCase();
       if(!hay.includes(q)) return false;
@@ -90,6 +92,8 @@ const GLOSS = [
   ["gremio", "corporazione di mestiere dei figoli"],
   ["pintada", "brocca a chiazze verdi e gialle, il pezzo più prestigioso"],
   ["frascu", "borraccia ovoidale schiacciata, da viaggio"],
+  ["pizzureddu", "brocchetta a tre manici con becco pizzicato, da tavola"],
+  ["cavallucci[oi]", "figura equestre propiziatoria dei tetti oristanesi"],
   ["cantar[oi]", "orcio da acqua, anche con rubinetto"],
   ["stangiu", "coperta di ingobbio e vetrina dei reperti più antichi"],
   ["ingobbi[oi]", "sottile strato di argilla bianca sotto la vetrina"],
