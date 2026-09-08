@@ -367,7 +367,7 @@ figcaption a{color:var(--bronze-hi)}
 .lungo{grid-column:1/-1}
 
 /* ---------- footer ---------- */
-footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink-2)}
+footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);position:relative;z-index:6}
 .foot{padding:28px 22px;display:grid;gap:10px;font-size:14.5px;font-style:italic}
 .foot p{margin:0;color:var(--mut)}
 .foot strong{color:var(--bone);font-style:normal}
