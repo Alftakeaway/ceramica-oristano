@@ -106,6 +106,7 @@ a{color:var(--bronze-hi)}
 
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:1.55fr 1fr;gap:30px;padding:46px 22px 12px;align-items:start}
+.hero-text{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:24px 26px}
 .kicker{
   display:flex;align-items:center;gap:10px;margin:0 0 12px;
   font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#5a3a10;
