@@ -152,7 +152,7 @@ a{color:var(--bronze-hi)}
 .facts div:first-child{border-top:none}
 .facts dt{font-family:var(--display);font-size:34px;font-weight:600;color:var(--bone);margin:0}
 .facts dd{margin:0;font-size:15.5px;font-style:italic;color:var(--perg)}
-.nota{font-size:13px;font-style:italic;color:var(--faint);margin:12px 0 0;border-top:1px solid var(--line-soft);padding-top:12px}
+.nota{font-size:13px;font-style:italic;color:#4a3a26;margin:12px 0 0;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:10px 14px}
 
 /* ---------- storia ---------- */
 .storia{padding-top:30px}
@@ -437,14 +437,14 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
 }
 
 /* ---------- progetto, bibliografia, gioco, contatti ---------- */
-.progetto h3,.biblio h3{font-size:22px;font-weight:600;margin:0 0 8px;color:#4a2f0c;text-shadow:0 1px 0 rgba(245,239,227,.55)}
-.progetto p,.biblio p{font-size:16.5px;max-width:70ch;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.45)}
+.progetto .due-col > div,.biblio .due-col > div{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:20px 22px}
+.progetto .due-col h3:first-child,.biblio .due-col h3:first-child{margin-top:0}
 .crediti,.bib{margin:8px 0 18px;padding:18px 20px 18px 40px;display:grid;gap:8px;font-size:16px;color:#241a0e;background:var(--ink);border:1px solid var(--line);border-radius:4px}
 .bib a{color:var(--bronze-hi)}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
 .cta-row .btn{margin-top:0;flex:1 1 220px}
 .btn-link{display:inline-block;text-align:center;text-decoration:none;line-height:1.2}
-.gioco-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;text-shadow:0 1px 0 rgba(245,239,227,.5)}
+.gioco-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:16px 20px}
 .indizi{margin:6px 0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:indizio}
 .indizi li{
   counter-increment:indizio;background:var(--ink-2);border:1px solid var(--line);
