@@ -108,14 +108,17 @@ a{color:var(--bronze-hi)}
 .hero{display:grid;grid-template-columns:1.55fr 1fr;gap:30px;padding:46px 22px 12px;align-items:start}
 .kicker{
   display:flex;align-items:center;gap:10px;margin:0 0 12px;
-  font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze);
+  font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#5a3a10;
+  background:rgba(245,239,227,.9);border:1px solid var(--line);border-radius:2px;
+  padding:6px 12px;width:fit-content;max-width:100%;
 }
-.kicker .tick{width:30px;height:1px;background:var(--bronze);flex:0 0 auto}
+.kicker .tick{width:30px;height:1px;background:var(--terra);flex:0 0 auto}
 .hero-text h2{
   font-size:clamp(2.5rem,4.6vw + 1rem,4rem);font-weight:600;
-  line-height:1.02;margin:0 0 14px;text-wrap:balance;
+  line-height:1.02;margin:0 0 14px;text-wrap:balance;color:#1a1206;
+  text-shadow:0 1px 0 rgba(245,239,227,.55), 0 0 18px rgba(245,239,227,.4);
 }
-.lede{font-size:19px;line-height:1.6;max-width:60ch;margin:0}
+.lede{font-size:19px;line-height:1.6;max-width:60ch;margin:0;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.5)}
 .lede strong{color:var(--terra);font-weight:600}
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
 /* gettoni d'archivio */
@@ -151,7 +154,7 @@ a{color:var(--bronze-hi)}
 /* ---------- storia ---------- */
 .storia{padding-top:30px}
 .storia-grid{display:grid;grid-template-columns:1fr 2.1fr;gap:28px;align-items:start}
-.storia-lede{font-family:var(--display);font-size:25px;line-height:1.35;color:var(--bronze-hi);margin:0 0 18px;font-weight:500}
+.storia-lede{font-family:var(--display);font-size:25px;line-height:1.35;color:#4a2f0c;margin:0 0 18px;font-weight:600;text-shadow:0 1px 0 rgba(245,239,227,.55)}
 /* figura storica nella colonna laterale */
 .fig-storia{margin:0}
 .fig-storia img,.fig-mestiere img{
@@ -161,8 +164,9 @@ a{color:var(--bronze-hi)}
 }
 .fig-storia img{aspect-ratio:4/4.4;object-fit:cover}
 figcaption{
-  margin-top:12px;font-size:13px;font-style:italic;color:var(--mut);line-height:1.5;
+  margin-top:12px;font-size:13px;font-style:italic;color:#3d2f1d;line-height:1.5;
   border-left:2px solid var(--terra);padding-left:10px;
+  text-shadow:0 1px 0 rgba(245,239,227,.5);
 }
 figcaption a{color:var(--bronze-hi)}
 
@@ -176,15 +180,16 @@ figcaption a{color:var(--bronze-hi)}
 .fig-mestiere img{aspect-ratio:4/4.6;object-fit:cover}
 .mestiere-tx .sec{margin:6px 0 10px}
 .mestiere-tx p:last-child{font-size:17px;color:var(--bone);margin:0;max-width:62ch}
-.storia-tx > p{margin:0 0 14px;font-size:17.5px;max-width:70ch;color:var(--bone)}
+.storia-tx > p{margin:0 0 14px;font-size:17.5px;max-width:70ch;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.45)}
 .storia-tx > p:last-child{margin-bottom:0}
 .storia-tx > p:first-of-type::first-letter{
   font-family:var(--display);font-weight:700;font-size:3.1em;float:left;
   line-height:.82;padding:4px 10px 0 0;color:var(--terra);
 }
 .fonti-storia{
-  font-family:var(--sans);font-size:12px !important;letter-spacing:.06em;color:var(--faint) !important;
+  font-family:var(--sans);font-size:12px !important;letter-spacing:.06em;color:#4a3a26 !important;
   border-top:1px solid var(--line-soft);padding-top:10px;
+  text-shadow:0 1px 0 rgba(245,239,227,.5);
 }
 .fonti-storia a{color:var(--bronze-hi)}
 
@@ -196,12 +201,14 @@ figcaption a{color:var(--bronze-hi)}
 }
 .sec-row::after{content:"";position:absolute;left:0;bottom:-5px;width:120px;height:1px;background:var(--bronze)}
 .sec-over{
-  margin:0 0 4px;font-family:var(--sans);font-size:11.5px;
-  letter-spacing:.26em;text-transform:uppercase;color:var(--bronze);
+  margin:0 0 4px;font-family:var(--sans);font-size:11.5px;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;color:#5a3a10;
+  background:rgba(245,239,227,.9);border:1px solid var(--line);border-radius:2px;
+  padding:5px 12px;width:fit-content;max-width:100%;
 }
-.sec{font-size:clamp(1.9rem,1.2rem + 2vw,2.6rem);font-weight:600;margin:0}
-.sec span{font-family:var(--body);font-style:italic;font-size:16px;color:var(--mut);font-weight:400}
-.sec-hint{margin:0 0 6px 0;font-size:14.5px;font-style:italic;color:var(--faint)}
+.sec{font-size:clamp(1.9rem,1.2rem + 2vw,2.6rem);font-weight:600;margin:0;color:#1a1206;text-shadow:0 1px 0 rgba(245,239,227,.55), 0 0 16px rgba(245,239,227,.4)}
+.sec span{font-family:var(--body);font-style:italic;font-size:16px;color:#4a3a26;font-weight:400;text-shadow:0 1px 0 rgba(245,239,227,.5)}
+.sec-hint{margin:0 0 6px 0;font-size:14.5px;font-style:italic;color:#3d2f1d;text-shadow:0 1px 0 rgba(245,239,227,.5)}
 .rail-nav{display:flex;gap:8px;margin-left:auto;margin-bottom:4px}
 #oggetti .sec-hint{margin-left:auto}
 
@@ -302,9 +309,9 @@ figcaption a{color:var(--bronze-hi)}
 .gloss dt{font-family:var(--display);font-size:19px;color:var(--bronze-hi);margin:0}
 .gloss dd{margin:2px 0 0;font-size:14.5px;color:var(--perg)}
 .due-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-.guida{margin:0;padding-left:24px;display:grid;gap:10px;font-size:16px}
+.guida{margin:0;padding-left:24px;display:grid;gap:10px;font-size:16px;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.45)}
 .guida strong{color:var(--bronze-hi);font-weight:600}
-.terr{margin:0;padding-left:20px;display:grid;gap:10px;font-size:16px}
+.terr{margin:0;padding-left:20px;display:grid;gap:10px;font-size:16px;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.45)}
 .terr a{color:var(--bronze-hi)}
 
 /* tooltip dei termini tecnici nelle schede */
@@ -413,14 +420,14 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
 }
 
 /* ---------- progetto, bibliografia, gioco, contatti ---------- */
-.progetto h3,.biblio h3{font-size:22px;font-weight:600;margin:0 0 8px;color:var(--bronze-hi)}
-.progetto p,.biblio p{font-size:16.5px;max-width:70ch}
-.crediti,.bib{margin:8px 0 18px;padding-left:22px;display:grid;gap:8px;font-size:16px}
+.progetto h3,.biblio h3{font-size:22px;font-weight:600;margin:0 0 8px;color:#4a2f0c;text-shadow:0 1px 0 rgba(245,239,227,.55)}
+.progetto p,.biblio p{font-size:16.5px;max-width:70ch;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.45)}
+.crediti,.bib{margin:8px 0 18px;padding-left:22px;display:grid;gap:8px;font-size:16px;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.45)}
 .bib a{color:var(--bronze-hi)}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
 .cta-row .btn{margin-top:0;flex:1 1 220px}
 .btn-link{display:inline-block;text-align:center;text-decoration:none;line-height:1.2}
-.gioco-intro{font-size:17px;font-style:italic;color:var(--perg);max-width:70ch}
+.gioco-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;text-shadow:0 1px 0 rgba(245,239,227,.5)}
 .indizi{margin:6px 0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:indizio}
 .indizi li{
   counter-increment:indizio;background:var(--ink-2);border:1px solid var(--line);
@@ -435,7 +442,7 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
 .indizi a{display:inline-block;margin-top:6px;color:var(--bronze-hi);font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 
 /* ---------- didascalia + lightbox ---------- */
-.didascalia{margin:8px 0 0;font-size:14px;font-style:italic;color:var(--mut)}
+.didascalia{margin:8px 0 0;font-size:14px;font-style:italic;color:#3d2f1d;text-shadow:0 1px 0 rgba(245,239,227,.5)}
 .lightbox{
   position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;gap:14px;
   padding:26px;background:rgba(0,0,0,.85);
