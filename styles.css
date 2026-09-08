@@ -83,7 +83,8 @@ a{color:var(--bronze-hi)}
 .topnav a{
   color:var(--perg);text-decoration:none;font-family:var(--sans);
   font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  padding:9px 13px;border:1px solid transparent;border-radius:2px;
+  padding:9px 13px;border:1px solid var(--line);border-radius:2px;
+  background:rgba(255,255,255,.4);
 }
 .topnav a:hover{color:var(--bronze);border-color:var(--line)}
 .stats{
