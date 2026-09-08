@@ -21,7 +21,22 @@ function fotoTipo(nome){
   return 'veduta';
 }
 
-let filtroCat = '', filtroRac = '', query = '';
+let filtroCat = '', filtroRac = '', filtroTipo = '', query = '';
+function tipoDi(o){
+  const t = (o.info && o.info.oggetto ? o.info.oggetto : '').toLowerCase().trim();
+  if(!t || /deposito/.test(t)) return 'Deposito';
+  if(/brocc/.test(t)) return 'Brocca';
+  if(/figur/.test(t)) return 'Figura';
+  if(/bottigli/.test(t)) return 'Bottiglia';
+  if(/fumaiol/.test(t)) return 'Fumaiolo';
+  if(/fiasc|frascu/.test(t)) return 'Fiasco';
+  if(/anfor/.test(t)) return 'Anfora';
+  if(/utensil|cubercu|tuvuli|tazza|piatto/.test(t)) return 'Utensile';
+  if(/scolapast/.test(t)) return 'Scolapasta';
+  if(/borracci/.test(t)) return 'Borraccia';
+  if(/canter|orcio/.test(t)) return 'Cantaro';
+  return t.charAt(0).toUpperCase() + t.slice(1);
+}
 function etichettaMedia(o){ return o.foto.length + (o.foto.length > 1 ? ' foto' : ' foto'); }
 function coverDi(cat){ const o = C.oggetti.find(x => x.categoria === cat); return o ? enc(o.foto[0]) : ''; }
 
@@ -39,6 +54,7 @@ function renderCategorie(){
 function syncFiltri(){
   $('#filtroCat').value = filtroCat;
   const sr = $('#filtroRac'); if(sr) sr.value = filtroRac;
+  const st = $('#filtroTipo'); if(st) st.value = filtroTipo;
   document.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c.dataset.id === filtroCat));
   renderOggetti();
 }
@@ -53,12 +69,22 @@ function renderChips(){
   sel.onchange = e => { filtroCat = e.target.value; syncFiltri(); };
   const sr = $('#filtroRac');
   if(sr) sr.onchange = e => { filtroRac = e.target.value; syncFiltri(); };
+  const st = $('#filtroTipo');
+  if(st){
+    const tipi = [...new Set(C.oggetti.map(tipoDi))].sort((a, b) => a.localeCompare(b, 'it'));
+    tipi.forEach(t => {
+      const n = C.oggetti.filter(o => tipoDi(o) === t).length;
+      const op = document.createElement('option'); op.value = t; op.textContent = `${t} (${n})`; st.appendChild(op);
+    });
+    st.onchange = e => { filtroTipo = e.target.value; syncFiltri(); };
+  }
 }
 function filtrati(){
   const q = query.trim().toLowerCase();
   return C.oggetti.filter(o => {
     if(filtroCat && o.categoria !== filtroCat) return false;
     if(filtroRac && !(o.info.autore || '').includes(filtroRac)) return false;
+    if(filtroTipo && tipoDi(o) !== filtroTipo) return false;
     if(q){
       const hay = (o.titolo + ' ' + o.chiave + ' ' + (o.codice || '') + ' ' + ((o.info && o.info.inventario) || '') + ' ' + ((o.info && o.info.soggetto) || '') + ' ' + ((o.info && o.info.descrizione) || '') + ' ' + ((o.info && o.info.dettagli) || '')).toLowerCase();
       if(!hay.includes(q)) return false;
@@ -72,7 +98,7 @@ function renderOggetti(){
   g.innerHTML = '';
   if(!list.length){
     g.innerHTML = `<div class="vuoto"><p>Nessuna scheda trovata per questa ricerca.</p><button class="btn" id="azzera">Azzera i filtri</button></div>`;
-    $('#azzera').onclick = () => { filtroCat = ''; filtroRac = ''; query = ''; $('#q').value = ''; syncFiltri(); };
+    $('#azzera').onclick = () => { filtroCat = ''; filtroRac = ''; filtroTipo = ''; query = ''; $('#q').value = ''; syncFiltri(); };
     return;
   }
   list.forEach(o => {
@@ -110,14 +136,32 @@ function gloss(t){
 }
 
 let corrente = null, idxFoto = 0, ultimoFuoco = null;
-function bindMain(){ const m = $('#mainImg'); if(m) m.onclick = () => window.open(m.src, '_blank'); }
+function didascaliaDi(o, i){ return `${fotoTipo(o.foto[i])} — ${i + 1} di ${o.foto.length}`; }
+function bindMain(){ const m = $('#mainImg'); if(m){ m.style.cursor = 'zoom-in'; m.onclick = () => apriLightbox(); } }
+function apriLightbox(){
+  const o = corrente; if(!o) return;
+  $('#lbImg').src = enc(o.foto[idxFoto]);
+  $('#lbImg').alt = `${o.titolo} — ${didascaliaDi(o, idxFoto)}`;
+  $('#lbCap').textContent = `${o.codice || ''} ${o.titolo} · ${didascaliaDi(o, idxFoto)}`;
+  $('#lightbox').classList.add('open'); $('#lightbox').setAttribute('aria-hidden', 'false');
+  $('#lbChiudi').focus();
+}
+function chiudiLightbox(){
+  $('#lightbox').classList.remove('open'); $('#lightbox').setAttribute('aria-hidden', 'true');
+}
+function lbVai(d){ mostraFoto(idxFoto + d); const o = corrente; if(!o) return; $('#lbImg').src = enc(o.foto[idxFoto]); $('#lbImg').alt = `${o.titolo} — ${didascaliaDi(o, idxFoto)}`; $('#lbCap').textContent = `${o.codice || ''} ${o.titolo} · ${didascaliaDi(o, idxFoto)}`; }
+$('#lbChiudi').onclick = () => chiudiLightbox();
+$('#lightbox').addEventListener('click', e => { if(e.target.id === 'lightbox') chiudiLightbox(); });
+$('#lbPrev').onclick = e => { e.stopPropagation(); lbVai(-1); };
+$('#lbNext').onclick = e => { e.stopPropagation(); lbVai(1); };
 function mostraFoto(i){
   const o = corrente; if(!o) return;
   idxFoto = (i + o.foto.length) % o.foto.length;
   const box = $('#mainBox'); if(!box) return;
-  box.innerHTML = `<img id="mainImg" src="${enc(o.foto[idxFoto])}">`;
+  box.innerHTML = `<img id="mainImg" src="${enc(o.foto[idxFoto])}" alt="${o.titolo} — ${didascaliaDi(o, idxFoto)}">`;
   document.querySelectorAll('#thumbs [data-i]').forEach(x => x.classList.toggle('on', +x.dataset.i === idxFoto));
   const c = $('#contaFoto'); if(c) c.textContent = `${idxFoto + 1} / ${o.foto.length}`;
+  const dc = $('#didascalia'); if(dc) dc.textContent = didascaliaDi(o, idxFoto);
   bindMain();
 }
 function chiudiScheda(){
@@ -133,7 +177,7 @@ function apri(id){
   $('#scheda').innerHTML = `
     <h2><span class="cod big">${o.codice || ''}</span> ${o.titolo}</h2>
     <div class="sott"><span class="badge">${cat.titolo}</span> · ${etichettaMedia(o)} in questa micro-sezione · vedute: ${tipi} · inv. <strong>${o.info.inventario}</strong></div>
-    <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}"></div><div class="conta" id="contaFoto"></div></div>
+    <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}" alt="${o.titolo}"></div><div class="conta" id="contaFoto"></div><p class="didascalia" id="didascalia"></p></div>
     <div class="thumbs" id="thumbs">${o.foto.map((f, i) => `<img data-i="${i}" class="${i === 0 ? 'on' : ''}" loading="lazy" src="${enc(f)}" title="${fotoTipo(f)} — ${f}">`).join('')}</div></div>
     <div class="blocchi">
       <div class="blocco registro lungo"><h4>Descrizione d'inventario — registro comunale (trascrizione fedele)</h4><p class="cit">«${o.info.soggetto}»</p><p><span class="badge inv">inv. ${o.info.inventario}</span> <span class="badge">${o.info.oggetto}</span> <span class="badge">${o.info.materia}</span> <span class="badge">ingresso ${o.info.data_ingresso}</span> <span class="badge">racc. ${o.info.autore}</span></p></div>
@@ -162,6 +206,12 @@ function apri(id){
 $('#chiudi').onclick = () => chiudiScheda();
 $('#modal').addEventListener('click', e => { if(e.target.id === 'modal') chiudiScheda(); });
 document.addEventListener('keydown', e => {
+  const lb = $('#lightbox').classList.contains('open');
+  if(lb){
+    if(e.key === 'Escape'){ chiudiLightbox(); return; }
+    if(e.key === 'ArrowRight'){ lbVai(1); return; }
+    if(e.key === 'ArrowLeft'){ lbVai(-1); return; }
+  }
   const aperta = $('#modal').classList.contains('open');
   if(e.key === 'Escape'){ if(aperta) chiudiScheda(); return; }
   if(!aperta || !corrente) return;
@@ -177,6 +227,7 @@ document.addEventListener('keydown', e => {
   if(e.key === 'ArrowLeft') mostraFoto(idxFoto - 1);
 });
 $('#q').addEventListener('input', e => { query = e.target.value; renderOggetti(); });
+const pst = $('#stampa'); if(pst) pst.onclick = () => window.print();
 
 let carTimer = null;
 function carStep(){ const g = $('#gridCat'); const card = g.querySelector('.cat'); if(!card) return; const w = card.offsetWidth + 14; if(g.scrollLeft + g.clientWidth >= g.scrollWidth - 12){ g.scrollTo({ left: 0, behavior: 'smooth' }); } else { g.scrollBy({ left: w, behavior: 'smooth' }); } }

@@ -426,12 +426,56 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:#0c0906}
   .cat,.obj,.btn,.car-btn,.chip{transition:none}
 }
 
+/* ---------- progetto, bibliografia, gioco, contatti ---------- */
+.progetto h3,.biblio h3{font-size:22px;font-weight:600;margin:0 0 8px;color:var(--bronze-hi)}
+.progetto p,.biblio p{font-size:16.5px;max-width:70ch}
+.crediti,.bib{margin:8px 0 18px;padding-left:22px;display:grid;gap:8px;font-size:16px}
+.bib a{color:var(--bronze-hi)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.cta-row .btn{margin-top:0;flex:1 1 220px}
+.btn-link{display:inline-block;text-align:center;text-decoration:none;line-height:1.2}
+.gioco-intro{font-size:17px;font-style:italic;color:var(--perg);max-width:70ch}
+.indizi{margin:6px 0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:indizio}
+.indizi li{
+  counter-increment:indizio;background:var(--ink-2);border:1px solid var(--line);
+  border-radius:4px;padding:14px 16px 14px 70px;position:relative;font-size:16.5px;
+}
+.indizi li::before{
+  content:counter(indizio);position:absolute;left:16px;top:12px;width:38px;height:38px;
+  display:flex;align-items:center;justify-content:center;border-radius:50%;
+  font-family:var(--display);font-size:20px;font-weight:700;color:#1a1206;
+  background:linear-gradient(180deg,var(--bronze-hi),var(--bronze));
+}
+.indizi a{display:inline-block;margin-top:6px;color:var(--bronze-hi);font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- didascalia + lightbox ---------- */
+.didascalia{margin:8px 0 0;font-size:14px;font-style:italic;color:var(--mut)}
+.lightbox{
+  position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;gap:14px;
+  padding:26px;background:rgba(5,4,2,.94);
+}
+.lightbox.open{display:flex}
+.lb-fig{margin:0;max-width:min(1000px,88vw);text-align:center}
+.lb-fig img{max-width:100%;max-height:78vh;object-fit:contain;background:#0b0906;border:1px solid var(--bronze);border-radius:4px}
+.lb-fig figcaption{margin-top:10px;font-size:14.5px;font-style:italic;color:var(--perg)}
+.lb-nav{
+  width:52px;height:52px;flex:0 0 auto;border-radius:50%;cursor:pointer;
+  font-family:var(--display);font-size:30px;line-height:1;color:var(--bronze-hi);
+  background:#0d0a06;border:1px solid var(--bronze);
+}
+.lb-nav:hover{background:linear-gradient(180deg,var(--bronze-hi),var(--bronze));color:#1a1206}
+.lightbox .x{top:18px;right:18px}
+@media(max-width:640px){
+  .lightbox{gap:6px;padding:12px}
+  .lb-nav{width:42px;height:42px;font-size:24px}
+}
+
 /* ---------- stampa: catalogo pulito su carta ---------- */
 @media print{
   @page{margin:15mm}
   body{background:#fff;color:#111;font-size:12pt}
   body::before,body::after{display:none !important}
-  .topbar,.commandbar,.meandro,.chips,.rail-nav,.topnav,.thumbs,.x,.btn,.conta,.firma,.mestiere,.mappa-wrap,.hero-card,.perc-grid,.modal,#condividi{display:none !important}
+  .topbar,.commandbar,.meandro,.chips,.rail-nav,.topnav,.thumbs,.x,.btn,.btn-link,.conta,.firma,.mestiere,.mappa-wrap,.hero-card,.perc-grid,.modal,.lightbox,#condividi,.gioco,.cta-row{display:none !important}
   .wrap{max-width:none}
   .hero{display:block;padding:0}
   .hero-text h2,.sec{color:#111}

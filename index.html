@@ -73,6 +73,7 @@
       <a href="#sale">Sale</a>
       <a href="#oggetti">Oggetti</a>
       <a href="#storia">Storia</a>
+      <a href="#progetto">Progetto</a>
       <a href="#mappa-sez">Mappa</a>
     </nav>
     <div class="stats" id="stats">…</div>
@@ -91,6 +92,9 @@
         <option value="Loria">Loria · 1908</option>
         <option value="Milano">Milano · 1908</option>
       </select>
+    </label>
+    <label class="cmd cmd-s">Tipo
+      <select id="filtroTipo"><option value="">Tutti i tipi</option></select>
     </label>
   </div>
 </header>
@@ -282,6 +286,88 @@
   </div>
 </section>
 
+<section class="wrap progetto" id="progetto" aria-labelledby="tit-prog">
+  <div class="sec-row">
+    <div class="sec-head">
+      <p class="sec-over">Chi siamo · missione · crediti</p>
+      <h2 class="sec" id="tit-prog">Il progetto</h2>
+    </div>
+  </div>
+  <div class="due-col">
+    <div>
+      <h3>Un museo digitale per i figoli</h3>
+      <p>Ceramica Oristano nasce per portare fuori dai depositi le ceramiche del Comune di Oristano: l'elenco d'inventario (oltre 160 voci tra coll. Clemente 1911 e Loria/Milano 1908) diventa un catalogo da sfogliare, dove ogni fotografia è ricongiunta alla sua descrizione originale del registro. L'obiettivo è triplice: <strong>documentare</strong> con rigore, <strong>raccontare</strong> con parole semplici, <strong>invitare</strong> a vedere gli originali nei musei cittadini.</p>
+      <h3>Chi lo cura</h3>
+      <ul class="crediti">
+        <li><strong>Fotografie e collezioni</strong> — Comune di Oristano, che custodisce e gestisce i reperti.</li>
+        <li><strong>Ricerca, testi e webmaster</strong> — Alfredo Forte.</li>
+        <li><strong>Riferimenti istituzionali</strong> — <a href="https://www.antiquariumarborense.it/" target="_blank" rel="noopener">Antiquarium Arborense</a>, <a href="https://www.buongiornoceramica.it/city/oristano/" target="_blank" rel="noopener">Oristano Città della Ceramica (AiCC)</a>.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Come è fatto</h3>
+      <ol class="guida">
+        <li><strong>Trascrizione fedele</strong> — ogni scheda riporta tra virgolette la voce del registro comunale.</li>
+        <li><strong>Foto e inventario insieme</strong> — la micro-sezione foto riunisce tutte le vedute di un oggetto.</li>
+        <li><strong>Catalogo aperto</strong> — 25 schede pubblicate, le altre in arrivo man mano che le foto vengono scattate.</li>
+      </ol>
+      <div class="cta-row">
+        <button class="btn" id="stampa" type="button">Stampa il catalogo (PDF)</button>
+        <a class="btn btn-link" href="mailto:alfredoforte.web@gmail.com?subject=Ceramica%20Oristano%20—%20contatto">Scrivi al curatore</a>
+      </div>
+      <p class="nota">Il pulsante stampa apre la finestra di stampa del browser: scegli «Salva come PDF» per scaricare il catalogo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap biblio" id="bibliografia" aria-labelledby="tit-bib">
+  <div class="sec-row">
+    <div class="sec-head">
+      <p class="sec-over">Per studiare e approfondire</p>
+      <h2 class="sec" id="tit-bib">Bibliografia e sitografia</h2>
+    </div>
+  </div>
+  <div class="due-col">
+    <div>
+      <h3>Bibliografia essenziale</h3>
+      <ul class="bib">
+        <li>AiCC — Touring Club Editore, <em>Le Città della Ceramica</em> (guida, scheda Oristano).</li>
+        <li>Statuto degli Alfareros, 25 aprile 1692 (Archivio storico, cit. in AiCC).</li>
+        <li>Collezione etnografica Gavino Clemente, sezione del Museo Sanna — nuclei 1908/1911.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sitografia</h3>
+      <ul class="bib">
+        <li><a href="https://www.buongiornoceramica.it/city/oristano/" target="_blank" rel="noopener">AiCC — Oristano, «In suburbium figulorum»</a></li>
+        <li><a href="https://artsandculture.google.com/exhibit/le-ceramiche-di-oristano/gQGRb7g4?hl=it" target="_blank" rel="noopener">Google Arts &amp; Culture — Le Ceramiche di Oristano</a></li>
+        <li><a href="https://comune.oristano.it/it/vivere-il-comune/citta-di-oristano/tradizione-identita-innovazione-e-creativita/" target="_blank" rel="noopener">Comune di Oristano — Tradizione, identità, innovazione</a></li>
+        <li><a href="https://www.antiquariumarborense.it/" target="_blank" rel="noopener">Antiquarium Arborense — Museo Giuseppe Pau</a></li>
+        <li><a href="https://www.sardegnaturismo.it/it/esplora/antiquarium-arborense" target="_blank" rel="noopener">SardegnaTurismo — Antiquarium Arborense</a></li>
+        <li><a href="https://it.wikipedia.org/wiki/Gavino_Clemente" target="_blank" rel="noopener">Wikipedia — Gavino Clemente e la raccolta etnografica</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap gioco" id="gioco" aria-labelledby="tit-gioco">
+  <div class="sec-row">
+    <div class="sec-head">
+      <p class="sec-over">Famiglie e scuole · 6 indizi</p>
+      <h2 class="sec" id="tit-gioco">Caccia al tesoro in museo</h2>
+    </div>
+  </div>
+  <p class="gioco-intro">Leggi l'indizio, cerca l'oggetto tra le schede e clicca la risposta per verificare. Vince chi li trova tutti e sei!</p>
+  <ol class="indizi">
+    <li><strong>Sul mio coperchio si cena in tanti.</strong> Una corona di figure attorno alla mensa… <a href="#scheda-brocca-cena-apostoli-5215">Scopri la risposta →</a></li>
+    <li><strong>Sono un frate e porto due iniziali.</strong> P.M. e una data incisa sul saio… <a href="#scheda-bottiglia-frate-5211">Scopri la risposta →</a></li>
+    <li><strong>Schiacciato da un lato, viaggio con i pastori.</strong> Acqua fresca nella bisaccia… <a href="#scheda-frascu-schiacciato-5280">Scopri la risposta →</a></li>
+    <li><strong>Ho un rubinetto e il nome di un santo.</strong> Si beve da me in cucina… <a href="#scheda-cantaro-efisio-5316">Scopri la risposta →</a></li>
+    <li><strong>Corro con un fantoccio in groppa.</strong> Un tempo stavo sui tetti a portare fortuna… <a href="#scheda-cavallo-fantoccio-5206">Scopri la risposta →</a></li>
+    <li><strong>Sono un camino con un omino seduto in cima.</strong> Tre pezzi di terracotta… <a href="#scheda-fumaiolo-uomo-seduto-5212">Scopri la risposta →</a></li>
+  </ol>
+</section>
+
 <section class="wrap mappa-sez" id="mappa-sez" aria-labelledby="tit-mappa">
   <div class="sec-row">
     <div class="sec-head">
@@ -298,6 +384,16 @@
     <button class="x" id="chiudi" aria-label="Chiudi scheda">✕</button>
     <div class="scheda" id="scheda"></div>
   </div>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="x" id="lbChiudi" aria-label="Chiudi ingrandimento">✕</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Foto precedente">‹</button>
+  <figure class="lb-fig">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-nav next" id="lbNext" aria-label="Foto successiva">›</button>
 </div>
 
 <div class="meandro" aria-hidden="true"></div>
