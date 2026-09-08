@@ -97,7 +97,7 @@ a{color:var(--bronze-hi)}
 .cmd-s{max-width:260px}
 .cmd input,.cmd select{
   font-family:var(--body);font-size:17px;color:var(--bone);text-transform:none;letter-spacing:0;
-  background:#fff;border:1px solid var(--line);border-radius:2px;
+  background:var(--ink);border:1px solid var(--line);border-radius:2px;
   padding:10px 13px;width:100%;
 }
 .cmd input::placeholder{color:var(--faint);font-style:italic}
@@ -310,7 +310,7 @@ figcaption a{color:var(--bronze-hi)}
 .gl{border-bottom:1px dotted var(--bronze);cursor:help;position:relative}
 .gl::after{
   content:attr(data-def);position:absolute;left:0;bottom:135%;min-width:190px;max-width:250px;
-  background:#fff;border:1px solid var(--line);border-radius:4px;padding:9px 11px;
+  background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:9px 11px;
   font-family:var(--sans);font-size:12.5px;font-style:normal;line-height:1.45;color:var(--bone);
   opacity:0;pointer-events:none;transition:opacity .15s;z-index:30;
   box-shadow:0 4px 12px rgba(0,0,0,.12);
@@ -331,7 +331,7 @@ figcaption a{color:var(--bronze-hi)}
 .modal{position:fixed;inset:0;z-index:60;display:none;padding:20px;overflow:auto;background:rgba(0,0,0,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .modal.open{display:block}
 .modal-box{
-  max-width:1120px;margin:2vh auto;background:#fff;
+  max-width:1120px;margin:2vh auto;background:var(--ink);
   border:1px solid var(--line);
   border-radius:4px;padding:30px;position:relative;
 }
