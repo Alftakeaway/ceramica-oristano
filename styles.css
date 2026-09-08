@@ -78,7 +78,7 @@ a{color:var(--bronze-hi)}
 }
 .brand h1{font-size:23px;margin:0;font-weight:600}
 .brand h1 span{display:block;font-family:var(--sans);font-weight:500;font-size:11.5px;color:var(--mut);letter-spacing:.22em;text-transform:uppercase}
-.brand-tx p{margin:4px 0 0;font-size:13.5px;font-style:italic;color:var(--faint)}
+.brand-tx p{margin:4px 0 0;font-size:13.5px;font-style:italic;color:#4a3a26}
 .topnav{display:flex;gap:2px;flex-wrap:nowrap;grid-area:nav;justify-self:end;align-self:center}
 .topnav a{
   color:var(--perg);text-decoration:none;font-family:var(--sans);
