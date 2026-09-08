@@ -79,7 +79,7 @@ a{color:var(--bronze-hi)}
 .topbar-in{display:flex;align-items:center;gap:22px;padding:16px 22px 12px}
 .brand{display:flex;gap:15px;align-items:center;min-width:0}
 .brand-logo{
-  height:72px;width:72px;flex:0 0 auto;object-fit:contain;
+  height:86px;width:86px;flex:0 0 auto;object-fit:contain;
   border:none;border-radius:0;
 }
 .brand h1{font-size:23px;margin:0;font-weight:600}
