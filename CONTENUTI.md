@@ -412,8 +412,13 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
   corone traforate, donati in occasione delle nozze. Il nucleo qui schedato
   proviene dalle raccolte etnografiche di **Gavino Clemente (ingresso
   1911)** e **Loria / Musei di Milano (1908)**, riunite per la Mostra di
-  Etnografia Italiana dell'Esposizione del 1911 e rimaste a Roma: oggi sono
-  al Museo delle Civiltà.
+  Etnografia Italiana dell'Esposizione del 1911: la grande rassegna per i 50
+  anni dell'Unità d'Italia, con i monumenti delle regioni ricostruiti a
+  grandezza naturale e le produzioni artistiche e artigianali di tutta
+  Italia. La Sardegna c'era con il nuraghe di Barumini riprodotto dal vero,
+  le **ceramiche di Oristano**, i tessuti di Sant'Antioco e i costumi
+  tradizionali. Chiusa l'Esposizione, le ceramiche restarono a Roma: oggi
+  sono nei depositi del Museo delle Civiltà.
 - **Testo 2:** La firma della città è il **verde e giallo su ingobbio
   bianco**: i reperti più antichi, dal monastero di Santa Chiara (XIII–XIV
   secolo), mostrano la tecnica dello *stangiu*; nel Quattrocento la coperta
