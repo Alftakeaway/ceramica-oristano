@@ -53,6 +53,10 @@ Verifica live su https://ceramica-oristano.vercel.app/ (niente anteprime locali)
 
 ## Crediti
 
+- Promozione — Claudia Origoni (First Srl)
+- Tutela scientifica — Dott.ssa Ludovica Piazzi (Museo delle Civiltà, Roma)
 - Reperti — Museo delle Civiltà, Roma (raccolte Clemente 1911, Loria/Milano 1908)
 - Fotografie e documenti — Comune di Oristano
+- Amministrazione — Massimiliano Sanna (sindaco), Valentina de Seneen
+  (assessora Attività produttive), Pupa Tarantini
 - Ricerca, testi e webmaster — Alfredo Forte

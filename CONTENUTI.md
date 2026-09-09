@@ -494,10 +494,14 @@ Figura: Brocca antica, Museo archeologico di Fiesole · foto Sailko, CC BY 2.5.
   descrizione originale. Obiettivo triplice: **documentare** con rigore,
   **raccontare** con parole semplici, **invitare** a vedere gli originali
   al Museo delle Civiltà di Roma.
-- **Chi lo cura:** Fotografie e documenti — Comune di Oristano. Reperti
-  custoditi al Museo delle Civiltà di Roma. Ricerca, testi e webmaster —
-  Alfredo Forte. Riferimenti: Antiquarium Arborense, Oristano Città della
-  Ceramica (AiCC).
+- **Chi lo cura:** Promozione — Claudia Origoni (First Srl), che ha
+  ritrovato le opere a Roma e voluto il progetto. Tutela scientifica —
+  Dott.ssa Ludovica Piazzi, storica dell'arte del Museo delle Civiltà
+  (MUCIV), Roma. Fotografie e documenti — Comune di Oristano; reperti al
+  Museo delle Civiltà. Amministrazione — Massimiliano Sanna (sindaco),
+  Valentina de Seneen (assessora alle Attività produttive), Pupa (Maria
+  Giuseppina) Tarantini. Ricerca, testi e webmaster — Alfredo Forte.
+  Riferimenti: Antiquarium Arborense, Oristano Città della Ceramica (AiCC).
 - **Come è fatto:** Trascrizione fedele — ogni scheda riporta tra
   virgolette la voce del registro. Foto e inventario insieme — la
   micro-sezione foto riunisce tutte le vedute. Catalogo aperto — 25 schede
