@@ -3,6 +3,11 @@
 Tutti i testi di https://ceramica-oristano.vercel.app/ in un unico file.
 Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
 
+> I reperti (inv. 5206–5343) sono oristanesi ma si trovano a Roma, al Museo
+> delle Civiltà: raccolti per la Mostra di Etnografia Italiana
+> dell'Esposizione del 1911 (50° anniversario dell'Unità d'Italia), vi
+> restarono e lì sono custoditi.
+
 ---
 
 ## Testata
@@ -35,8 +40,8 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
    rubinetto, scolapasta e caraffe incise: la cucina oristanese in terracotta
    invetriata solo dove serve. (CO004, CO021, CO023, CO006, CO003, CO005)
 3. **Dietro le quinte: il mestiere** — Depositi, scaffali e cartellini: come
-   il museo custodisce la collezione Clemente e Loria, tra buste, scaffali e
-   numeri di magazzino. (CO008, CO002, CO009, CO013)
+   il Museo delle Civiltà di Roma custodisce la collezione Clemente e Loria,
+   tra buste, scaffali e numeri di magazzino. (CO008, CO002, CO009, CO013)
 
 ## Le sale (Percorso espositivo · sale I–VI)
 
@@ -49,9 +54,9 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
 3. **Acqua e cucina** — Cantari con rubinetto, scolapasta e vasi per grassi:
    la cucina oristanese in terracotta. Invetriature verdi all'interno,
    scritte devozionali come EFISIO.
-4. **Dietro le quinte** — Vetrine e depositi: scaffali Sardegna, cartellini
-   d'inventario 52xx–53xx, buste di conservazione. Come il museo custodisce
-   la collezione.
+4. **Dietro le quinte** — Vetrine e depositi del Museo delle Civiltà di Roma:
+   scaffali Sardegna, cartellini d'inventario 52xx–53xx, buste di
+   conservazione. Come il museo custodisce la collezione.
 5. **Figure e cavallucci** — Cavalli con fantoccio in ceramica invetriata:
    la tradizione del «Su Cavalluccio» oristanese, figura propiziatoria
    collocata sui crinali dei tetti e nelle case. Serie 5206–5210,
@@ -173,10 +178,10 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
 - **Inventario:** contesto, non un singolo oggetto
 - **Registro:** Scaffali metallici con ceramiche sarde imbustate, cartellini
   5216 · 5220 · 5239 · 5240 · 5314 · 5315 · 5316 · 5345 · 5346
-- **Nota del museo:** Dietro le quinte: la scaffalatura «129 SARDEGNA»
-  custodisce il resto della collezione — brocche, cantari, coperchi
-  «cubercu», fumaioli — ciascuno nella sua busta con cartellino. Da qui
-  provengono gli oggetti delle altre schede.
+- **Nota del museo:** Dietro le quinte del Museo delle Civiltà di Roma: la
+  scaffalatura «129 SARDEGNA» custodisce il resto della collezione — brocche,
+  cantari, coperchi «cubercu», fumaioli — ciascuno nella sua busta con
+  cartellino. Da qui provengono gli oggetti delle altre schede.
 - **Da osservare:** in basso a destra 5346, 5283, 5240; al centro 5216
   (brocca S. Efisio con coperchio a punta).
 
@@ -406,8 +411,9 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
   foggiatura e scultura con angeli, fiori a rilievo, beccucci multipli e
   corone traforate, donati in occasione delle nozze. Il nucleo qui schedato
   proviene dalle raccolte etnografiche di **Gavino Clemente (ingresso
-  1911)** e **Loria / Musei di Milano (1908)**, oggi confluite nei musei
-  cittadini.
+  1911)** e **Loria / Musei di Milano (1908)**, riunite per la Mostra di
+  Etnografia Italiana dell'Esposizione del 1911 e rimaste a Roma: oggi sono
+  al Museo delle Civiltà.
 - **Testo 2:** La firma della città è il **verde e giallo su ingobbio
   bianco**: i reperti più antichi, dal monastero di Santa Chiara (XIII–XIV
   secolo), mostrano la tecnica dello *stangiu*; nel Quattrocento la coperta
@@ -477,15 +483,16 @@ Figura: Brocca antica, Museo archeologico di Fiesole · foto Sailko, CC BY 2.5.
 ## Il progetto (Chi siamo · missione · crediti)
 
 - **Un museo digitale per i figoli:** Ceramica Oristano nasce per portare
-  fuori dai depositi le ceramiche del Comune: l'elenco d'inventario (oltre
-  160 voci tra coll. Clemente 1911 e Loria/Milano 1908) diventa un catalogo
-  da sfogliare, dove ogni fotografia è ricongiunta alla sua descrizione
-  originale. Obiettivo triplice: **documentare** con rigore,
+  fuori dai depositi romani le ceramiche oristanesi: l'elenco d'inventario
+  (oltre 160 voci tra coll. Clemente 1911 e Loria/Milano 1908) diventa un
+  catalogo da sfogliare, dove ogni fotografia è ricongiunta alla sua
+  descrizione originale. Obiettivo triplice: **documentare** con rigore,
   **raccontare** con parole semplici, **invitare** a vedere gli originali
-  nei musei cittadini.
-- **Chi lo cura:** Fotografie e collezioni — Comune di Oristano. Ricerca,
-  testi e webmaster — Alfredo Forte. Riferimenti: Antiquarium Arborense,
-  Oristano Città della Ceramica (AiCC).
+  al Museo delle Civiltà di Roma.
+- **Chi lo cura:** Fotografie e documenti — Comune di Oristano. Reperti
+  custoditi al Museo delle Civiltà di Roma. Ricerca, testi e webmaster —
+  Alfredo Forte. Riferimenti: Antiquarium Arborense, Oristano Città della
+  Ceramica (AiCC).
 - **Come è fatto:** Trascrizione fedele — ogni scheda riporta tra
   virgolette la voce del registro. Foto e inventario insieme — la
   micro-sezione foto riunisce tutte le vedute. Catalogo aperto — 25 schede
@@ -527,5 +534,6 @@ indicativa.
 Ceramica Oristano — Museo della Ceramica. Schede a scopo espositivo e
 documentativo. Descrizioni d'inventario trascritte dal registro comunale;
 attribuzioni storiche da verificare dal vivo. 39 fotografie · 25 schede ·
-inv. 5206–5343 (Clemente 1911, Loria/Milano 1908) · Comune di Oristano.
+inv. 5206–5343 (Clemente 1911, Loria/Milano 1908) · reperti al Museo delle
+Civiltà, Roma · materiali dal Comune di Oristano.
 Designed & Developed by alfredoforte.web@gmail.com.

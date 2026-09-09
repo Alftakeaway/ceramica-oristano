@@ -14,7 +14,7 @@ window.CATALOGO = {
   },
   "dietro-quinte": {
    "titolo": "Dietro le quinte",
-   "descr": "Vetrine e depositi: scaffali Sardegna, cartellini d'inventario 52xx–53xx, buste di conservazione. Come il museo custodisce la collezione."
+   "descr": "Vetrine e depositi del Museo delle Civiltà di Roma: scaffali Sardegna, cartellini d'inventario 52xx–53xx, buste di conservazione. Come il museo custodisce la collezione."
   },
   "figure": {
    "titolo": "Figure e cavallucci",
@@ -166,8 +166,8 @@ window.CATALOGO = {
     "materia": "—",
     "data_ingresso": "—",
     "autore": "—",
-    "descrizione": "Dietro le quinte del museo: la scaffalatura «129 SARDEGNA» custodisce il resto della collezione — brocche, cantari, coperchi «cubercu», fumaioli — ciascuno nella sua busta con cartellino (si leggono 5216 S. Efisio, 5220, 5314–5316 vasi per grassi e canteri, 5345–5346). Il dettaglio mostra una brocca della sposa imbustata con cartellino «52… Sardegna». Da qui provengono gli oggetti delle altre schede.",
-    "dettagli": "Nella foto ampia: in basso a destra 5346, 5283, 5240; al centro 5216 (brocca S. Efisio con coperchio a punta). Stato di conservazione in deposito, da riesporre."
+    "descrizione": "Dietro le quinte del Museo delle Civiltà di Roma: la scaffalatura «129 SARDEGNA» custodisce il resto della collezione — brocche, cantari, coperchi «cubercu», fumaioli — ciascuno nella sua busta con cartellino (si leggono 5216 S. Efisio, 5220, 5314–5316 vasi per grassi e canteri, 5345–5346). Il dettaglio mostra una brocca della sposa imbustata con cartellino «52… Sardegna». Da qui provengono gli oggetti delle altre schede.",
+    "dettagli": "Nella foto ampia: in basso a destra 5346, 5283, 5240; al centro 5216 (brocca S. Efisio con coperchio a punta). Stato di conservazione nei depositi romani, da riesporre."
    }
   },
   {

@@ -1,8 +1,14 @@
 # Ceramica Oristano — Museo della Ceramica
 
-Museo digitale delle ceramiche del Comune di Oristano: 25 schede d'inventario
-(CO001–CO025) con 39 fotografie, 6 sale espositive, percorsi tematici,
-storia dei figoli, glossario, mappa del quartiere e caccia al tesoro.
+Museo digitale delle ceramiche oristanesi custodite al **Museo delle
+Civiltà di Roma**: 25 schede d'inventario (CO001–CO025) con 39 fotografie,
+6 sale espositive, percorsi tematici, storia dei figoli, glossario, mappa
+del quartiere e caccia al tesoro.
+
+I reperti — raccolte etnografiche Gavino Clemente (1911) e Loria / Musei di
+Milano (1908), inv. 5206–5343 — furono riuniti per la Mostra di Etnografia
+Italiana dell'Esposizione del 1911 (50° anniversario dell'Unità d'Italia) e
+restarono a Roma.
 
 - **Live:** https://ceramica-oristano.vercel.app/
 - **Repo:** https://github.com/Alftakeaway/ceramica-oristano (branch `main`)
@@ -47,7 +53,6 @@ Verifica live su https://ceramica-oristano.vercel.app/ (niente anteprime locali)
 
 ## Crediti
 
-- Fotografie e collezioni — Comune di Oristano
+- Reperti — Museo delle Civiltà, Roma (raccolte Clemente 1911, Loria/Milano 1908)
+- Fotografie e documenti — Comune di Oristano
 - Ricerca, testi e webmaster — Alfredo Forte
-- Registro: coll. etnografica Gavino Clemente (ingresso 1911),
-  Loria / Musei di Milano (1908), inv. 5206–5343
