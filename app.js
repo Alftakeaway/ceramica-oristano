@@ -184,6 +184,31 @@ $('#lbChiudi').onclick = () => chiudiLightbox();
 $('#lightbox').addEventListener('click', e => { if(e.target.id === 'lightbox') chiudiLightbox(); });
 $('#lbPrev').onclick = e => { e.stopPropagation(); lbVai(-1); };
 $('#lbNext').onclick = e => { e.stopPropagation(); lbVai(1); };
+/* visita guidata in 5 tappe: livello divulgativo, poi scheda completa */
+const TAPPE = [
+ { id: 'brocca-4manici-angeli-5213', t: 'La sposa', x: 'L\u2019anfora delle nozze: quattro manici, angeli e fiori a rilievo. Pi\u00f9 da parata che da uso, il dono pi\u00f9 prezioso dei figoli.' },
+ { id: 'frascu-schiacciato-5280', t: 'Il viaggio', x: 'Il frascu, borraccia schiacciata da legare al fianco: acqua fresca per pastori e viandanti, vetrina solo dove serve.' },
+ { id: 'cantaro-efisio-5316', t: 'La devozione', x: 'Il cantaro di Sant\u2019Efisio, con rubinetto e fiori a rilievo: l\u2019acqua di ogni giorno sotto la protezione del santo.' },
+ { id: 'cavallo-fantoccio-5206', t: 'Il tetto', x: 'Il cavalluccio con fantoccio in groppa: sui crinali dei tetti portava fortuna alle case.' },
+ { id: 'fumaiolo-uomo-seduto-5212', t: 'Il camino', x: 'Il fumaiolo con l\u2019omino seduto in cima: tre pezzi di terracotta a coronare i comignoli.' }
+];
+let tourIdx = 0;
+function tourMostra(i){
+  tourIdx = (i + TAPPE.length) % TAPPE.length;
+  const o = C.oggetti.find(x => x.id === TAPPE[tourIdx].id); if(!o) return;
+  const img = $('#tourImg'); img.src = enc(o.foto[0]); img.alt = o.titolo;
+  $('#tourTit').textContent = `${tourIdx + 1} · ${TAPPE[tourIdx].t} — ${o.titolo}`;
+  $('#tourCont').textContent = TAPPE[tourIdx].x;
+  $('#tourNum').textContent = `${tourIdx + 1} / ${TAPPE.length}`;
+  $('#tourScheda').href = '#scheda-' + o.id;
+}
+function tourInizia(){ tourMostra(0); const t = $('#tour'); t.classList.add('open'); t.setAttribute('aria-hidden', 'false'); $('#tourChiudi').focus(); }
+function tourEsci(){ const t = $('#tour'); t.classList.remove('open'); t.setAttribute('aria-hidden', 'true'); }
+$('#tourPrev').onclick = e => { e.stopPropagation(); tourMostra(tourIdx - 1); };
+$('#tourNext').onclick = e => { e.stopPropagation(); tourMostra(tourIdx + 1); };
+$('#tourChiudi').onclick = () => tourEsci();
+$('#tour').addEventListener('click', e => { if(e.target.id === 'tour' || e.target.classList.contains('tour-box')) tourEsci(); });
+$('#tourScheda').addEventListener('click', () => tourEsci());
 function mostraFoto(i){
   const o = corrente; if(!o) return;
   idxFoto = (i + o.foto.length) % o.foto.length;
@@ -211,10 +236,13 @@ function apri(id){
     <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}" alt="${o.titolo}"></div><div class="conta" id="contaFoto"></div><p class="didascalia" id="didascalia"></p><p class="zoom-hint">Clicca sulla foto per ingrandirla a tutto schermo</p></div>
     <div class="thumbs" id="thumbs">${o.foto.map((f, i) => `<img data-i="${i}" class="${i === 0 ? 'on' : ''}" loading="lazy" src="${enc(f)}" alt="${o.titolo} — ${fotoTipo(f)}" title="${fotoTipo(f)} — ${f}">`).join('')}</div></div>
     <div class="blocchi">
-      <div class="blocco registro lungo"><h4>Descrizione d'inventario — registro comunale (trascrizione fedele)</h4><p class="cit">«${o.info.soggetto}»</p><p><span class="badge inv">inv. ${o.info.inventario}</span> <span class="badge">${o.info.oggetto}</span> <span class="badge">${o.info.materia}</span> <span class="badge">ingresso ${o.info.data_ingresso}</span> <span class="badge">racc. ${o.info.autore}</span></p></div>
       <div class="blocco lungo"><h4>Descrizione museo</h4><p>${gloss(o.info.descrizione)}</p><p><strong>Contesto:</strong> ${gloss(CONTESTI[o.categoria])}</p></div>
-      <div class="blocco"><h4>Dettagli da osservare</h4><p>${gloss(o.info.dettagli)}</p><h4>Le foto di questa scheda</h4><ul>${o.foto.map(f => `<li><strong>${fotoTipo(f)}</strong> — ${f}</li>`).join('')}</ul></div>
-      <div class="blocco"><h4>Nota di catalogo</h4><p>Scheda compilata incrociando le foto con il file «Ceramiche Oristano.xlsx» (inventari 5206–5343 e oltre). Le foto mostrano spesso più pezzi insieme: l'attribuzione all'inventario segue la descrizione più vicina per forma, vetrina e scritte visibili (es. «5313» sul fondo dello scolapasta, «EFISIO» sul cantaro). Verificare dal vivo misure, marchi e stato conservativo.</p></div>
+      <div class="blocco"><h4>Dettagli da osservare</h4><p>${gloss(o.info.dettagli)}</p></div>
+      <details class="blocco lungo scienza"><summary>Approfondimento scientifico: registro e catalogo</summary>
+      <h4>Descrizione d'inventario — registro comunale (trascrizione fedele)</h4><p class="cit">«${o.info.soggetto}»</p><p><span class="badge inv">inv. ${o.info.inventario}</span> <span class="badge">${o.info.oggetto}</span> <span class="badge">${o.info.materia}</span> <span class="badge">ingresso ${o.info.data_ingresso}</span> <span class="badge">racc. ${o.info.autore}</span></p>
+      <h4>Nota di catalogo</h4><p>Scheda compilata incrociando le foto con il file «Ceramiche Oristano.xlsx» (inventari 5206–5343 e oltre). Le foto mostrano spesso più pezzi insieme: l'attribuzione all'inventario segue la descrizione più vicina per forma, vetrina e scritte visibili (es. «5313» sul fondo dello scolapasta, «EFISIO» sul cantaro). Verificare dal vivo misure, marchi e stato conservativo.</p>
+      <h4>Le foto di questa scheda</h4><ul>${o.foto.map(f => `<li><strong>${fotoTipo(f)}</strong> — ${f}</li>`).join('')}</ul>
+      </details>
       <div class="blocco lungo vedi"><h4>Vedi anche</h4><p>${C.oggetti.filter(x => x.categoria === o.categoria && x.id !== o.id).slice(0, 3).map(x => `<a href="#scheda-${x.id}">${x.codice} — ${x.titolo}</a>`).join(' · ')}</p><button class="btn" id="condividi">Condividi questa scheda</button></div>
     </div>`;
   document.querySelectorAll('#thumbs [data-i]').forEach(im => im.onclick = () => mostraFoto(+im.dataset.i));
@@ -239,6 +267,12 @@ function apri(id){
 $('#chiudi').onclick = () => chiudiScheda();
 $('#modal').addEventListener('click', e => { if(e.target.id === 'modal') chiudiScheda(); });
 document.addEventListener('keydown', e => {
+  const tv = $('#tour').classList.contains('open');
+  if(tv){
+    if(e.key === 'Escape'){ tourEsci(); return; }
+    if(e.key === 'ArrowRight'){ tourMostra(tourIdx + 1); return; }
+    if(e.key === 'ArrowLeft'){ tourMostra(tourIdx - 1); return; }
+  };
   const lb = $('#lightbox').classList.contains('open');
   if(lb){
     if(e.key === 'Escape'){ chiudiLightbox(); return; }
@@ -312,6 +346,7 @@ function initMappa(){
   const nf = C.totaleFoto, no = C.oggetti.length, nc = Object.keys(C.categorie).length;
   $('#stats').textContent = `${nc} sale · ${no} schede · ${nf} foto`;
   renderChips(); renderCategorie(); initCarousel(); renderOggetti(); initMappa();
+  document.querySelectorAll('.tour-start').forEach(b => b.addEventListener('click', e => { e.preventDefault(); tourInizia(); }));
   const h = (location.hash || '').replace(/^#scheda-/, '');
   if(h && C.oggetti.some(x => x.id === h)) apri(h);
 })();

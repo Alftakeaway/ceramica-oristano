@@ -433,8 +433,13 @@ section > h2.sec{
 .thumbs img.on{border-color:var(--bronze);box-shadow:0 0 0 1px var(--bronze)}
 .blocchi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:18px}
 .blocco{background:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:16px 18px}
-.blocco.registro{border:1px solid var(--verde);border-left:4px solid var(--verde);background:#f5f5e8}
 .blocco h4{margin:0 0 8px;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze)}
+/* livello 2: approfondimento scientifico chiuso di default */
+details.blocco summary{cursor:pointer;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);list-style:none}
+details.blocco summary::-webkit-details-marker{display:none}
+details.blocco summary::before{content:"+ "}
+details.blocco[open] summary::before{content:"– "}
+details.blocco summary:hover{color:var(--terra)}
 .blocco p,.blocco li{font-size:16px;margin:5px 0}
 .blocco ul{padding-left:20px;margin:6px 0}
 /* capolettera sulla descrizione del museo */
@@ -522,6 +527,20 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
 }
 .indizi a{display:inline-block;margin-top:6px;color:var(--bronze-hi);font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 
+/* ---------- visita guidata ---------- */
+.tour{position:fixed;inset:0;z-index:85;display:none;background:rgba(20,12,4,.96)}
+.tour.open{display:block}
+.tour-box{position:relative;min-height:100%;display:flex;align-items:center;justify-content:center;gap:14px;padding:26px}
+.tour-fig{margin:0;max-width:min(900px,86vw);text-align:center}
+.tour-fig img{max-width:100%;max-height:60vh;object-fit:contain;background:#0b0906;border:1px solid var(--bronze);border-radius:4px}
+.tour-fig figcaption{margin-top:12px;display:grid;gap:6px;font-size:17px;font-style:italic;color:var(--perg)}
+.tour-fig figcaption strong{font-family:var(--display);font-style:normal;font-size:24px;color:#fff}
+.tour-passi{display:flex;gap:16px;align-items:center;justify-content:center;margin:10px 0 0;font-family:var(--sans);font-size:13px;letter-spacing:.1em;color:var(--bronze-hi)}
+.tour-passi a{color:var(--bronze-hi)}
+@media(max-width:640px){
+  .tour-box{gap:6px;padding:12px}
+}
+
 /* ---------- didascalia + lightbox ---------- */
 .didascalia{margin:8px 0 0;font-size:14px;font-style:italic;color:#3d2f1d;text-shadow:0 1px 0 rgba(245,239,227,.5)}
 .zoom-hint{margin:4px 0 0;font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
@@ -550,7 +569,7 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   @page{margin:15mm}
   body{background:#fff;color:#111;font-size:12pt}
   body::before,body::after{display:none !important}
-  .topbar,.commandbar,.meandro,.chips,.rail-nav,.topnav,.thumbs,.x,.btn,.btn-link,.conta,.firma,.mestiere,.mappa-wrap,.hero-card,.perc-grid,.modal,.lightbox,#condividi,.gioco,.cta-row,.capolavori{display:none !important}
+  .topbar,.commandbar,.meandro,.chips,.rail-nav,.topnav,.thumbs,.x,.btn,.btn-link,.conta,.firma,.mestiere,.mappa-wrap,.hero-card,.perc-grid,.modal,.lightbox,.tour,#condividi,.gioco,.cta-row,.capolavori{display:none !important}
   .wrap{max-width:none}
   .hero{display:block;padding:0}
   .hero-text h2,.sec{color:#111}

@@ -27,7 +27,9 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
   insieme, dettagli, fondi e scritte — con la **descrizione originale del
   registro d'inventario** (Comune di Oristano, coll. Clemente 1911 /
   Loria-Milano   1908) e una nota sulla tradizione dei *figoli*.
-- **Bottoni hero:** Vedi dove siamo (→ mappa) · Proponi un oggetto (→ prestiti)
+- **Bottoni hero:** Inizia la visita (guidata 1/5) · Vedi dove siamo · Proponi un oggetto
+- **Visita guidata:** 5 tappe (sposa, viaggio, devozione, tetto, camino) con frecce, contatore e link alla scheda completa
+- **Schede a due livelli:** descrizione + dettagli visibili; registro, nota di catalogo ed elenco foto dietro "Approfondimento scientifico"
 - **Strip capolavori:** 8 foto in scorrimento dopo la hero, click → scheda
 - **Lente zoom:** nelle schede, lente 2x al passaggio del mouse (più lightbox fullscreen al click)
 - **Card "Il percorso":** 6 sale — spose, uso quotidiano, acqua e cucina,
