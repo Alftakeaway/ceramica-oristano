@@ -557,8 +557,10 @@ delle condivisioni.
   Città della Ceramica (AiCC).
 - **Come è fatto:** Trascrizione fedele — ogni scheda riporta tra
   virgolette la voce del registro. Foto e inventario insieme — la
-  micro-sezione foto riunisce tutte le vedute. Catalogo aperto — 25 schede
-  pubblicate, le altre in arrivo con le nuove foto.
+  micro-sezione foto riunisce tutte le vedute. Due sedi, due colori —
+  badge Roma (terracotta) e Oristano (verde). Catalogo aperto — 25 schede
+  da Roma, Oristano in arrivo. Collezione che cresce — prestiti, timeline
+  1908→oggi, caccia al tesoro.
 - Stampa il catalogo (PDF) · Scrivi al curatore · Nota: il pulsante stampa
   apre la finestra del browser: scegli «Salva come PDF».
 
