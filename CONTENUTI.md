@@ -467,7 +467,21 @@ Le stesse famiglie di oggetti che ritrovi nelle sale: l'anfora nuziale a
 più manici, la borraccia schiacciata da viaggio, l'orcio da acqua con
 rubinetto. Forme nate dalla mano e dal forno a legna, invetriate solo dove
 serve — il resto è argilla che si lascia guardare.
+
+Il ciclo è quello di sempre: argilla del Tirso foggiata al tornio e
+rifinita da tenera, con decori impressi o a rilievo; essiccazione e prima
+cottura a legna (biscotto); ingobbio bianco e vetrina al piombo — i verdi
+e i gialli di Oristano — e seconda cottura. Mestiere antichissimo (dal
+Neolitico), organizzato nel Gremio dei figoli.
+
+Le famiglie di forme: anfora nuziale (sposa, 4 manici, beccucci, angeli,
+corone traforate) · frascu (borraccia schiacciata da viaggio) · cantaro
+(orcio con rubinetto, scritte devozionali) · cucina (scolapasta, pentole,
+vasi per grassi) · figure (cavallucci, frate) · fumaioli (dal torrino
+forato all'uomo seduto).
+
 Figura: Brocca antica, Museo archeologico di Fiesole · foto Sailko, CC BY 2.5.
+Fonti: S&H Magazine (2023), SardegnaCultura.
 
 ## A Oristano (La prossima sala · sede Oristano)
 

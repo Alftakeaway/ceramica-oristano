@@ -191,6 +191,9 @@ figcaption a{color:var(--bronze-hi)}
 .fig-mestiere{margin:0}
 .fig-mestiere img{aspect-ratio:4/4.6;object-fit:cover}
 .mestiere-tx .sec{margin:6px 0 10px}
+.mestiere-tx h3{font-size:21px;font-weight:600;margin:18px 0 8px;color:#4a2f0c}
+.mestiere-tx .forme{margin:0 0 6px;padding-left:22px;display:grid;gap:8px;font-size:16px;color:var(--bone)}
+.mestiere-tx .forme strong{color:var(--terra)}
 .mestiere-tx p:last-child{font-size:17px;color:var(--bone);margin:0;max-width:62ch}
 .storia-tx > p{margin:0 0 14px;font-size:17.5px;max-width:70ch;color:#241a0e;text-shadow:0 1px 0 rgba(245,239,227,.45)}
 .storia-tx > p:last-child{margin-bottom:0}
