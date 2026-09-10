@@ -236,6 +236,15 @@ document.addEventListener('keydown', e => {
   if(e.key === 'ArrowLeft') mostraFoto(idxFoto - 1);
 });
 $('#q').addEventListener('input', e => { query = e.target.value; renderOggetti(); });
+const home = $('#home');
+if(home) home.addEventListener('click', e => {
+  e.preventDefault();
+  filtroCat = ''; filtroRac = ''; filtroTipo = ''; query = '';
+  const q = $('#q'); if(q) q.value = '';
+  try{ history.replaceState(null, '', location.pathname); }catch(_){}
+  syncFiltri();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 const pst = $('#stampa'); if(pst) pst.onclick = () => window.print();
 
 let carTimer = null;
