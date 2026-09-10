@@ -109,7 +109,7 @@ a{color:var(--bronze-hi)}
 .cmd input:focus,.cmd select:focus{border-color:var(--bronze);outline:none}
 
 /* ---------- hero ---------- */
-.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:30px;padding:46px 22px 12px;align-items:start}
+.hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:30px;padding:46px 22px 12px;align-items:start}
 .hero-text{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:24px 26px}
 .kicker{
   display:flex;align-items:center;gap:10px;margin:0 0 12px;
@@ -158,7 +158,7 @@ a{color:var(--bronze-hi)}
 
 /* ---------- storia ---------- */
 .storia{padding-top:30px}
-.storia-grid{display:grid;grid-template-columns:1fr 2.1fr;gap:28px;align-items:start}
+.storia-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:28px;align-items:start}
 .storia-side{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:20px;align-self:start;position:sticky;top:250px}
 .storia-side .fig-storia + .fig-storia{margin-top:22px}
 .storia-tx{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:22px 24px}
@@ -180,9 +180,9 @@ figcaption a{color:var(--bronze-hi)}
 
 /* fascia del mestiere: forme del catalogo */
 .mestiere{
-  display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center;
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:30px;align-items:center;
   margin-top:34px;padding:24px;border:1px solid var(--line);border-radius:4px;
-  background:var(--ink-2);
+  background:var(--ink-2);overflow:hidden;
 }
 .fig-mestiere{margin:0}
 .fig-mestiere img{aspect-ratio:4/4.6;object-fit:cover}
@@ -313,7 +313,7 @@ section > h2.sec{
 .btn:hover{background:var(--bronze);color:#fff}
 
 /* ---------- percorsi tematici ---------- */
-.perc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.perc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .perc{
   background:var(--ink-2);
   border:1px solid var(--line);border-radius:4px;padding:20px 20px 16px;
@@ -326,7 +326,7 @@ section > h2.sec{
 .perc a{color:var(--bronze-hi)}
 
 /* ---------- dove sono: Roma / Oristano / comunità ---------- */
-.sedi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 20px}
+.sedi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 20px}
 .sede{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:14px 16px;display:grid;gap:4px;align-content:start}
 .sede.roma{border-top:3px solid var(--terra)}
 .sede.oristano{border-top:3px solid var(--verde)}
@@ -335,7 +335,7 @@ section > h2.sec{
 .sede span{font-size:15px;font-style:italic;color:var(--perg)}
 
 /* ---------- timeline 1908-oggi ---------- */
-.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
 .tl li{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:14px;display:grid;gap:6px;align-content:start;border-top:3px solid var(--terra)}
 .tl li.futuro{border-top-color:var(--verde)}
 .tl .anno{font-family:var(--display);font-size:26px;color:var(--terra);border-bottom:1px solid var(--line-soft);padding-bottom:6px}
@@ -344,7 +344,7 @@ section > h2.sec{
 .tl span:last-child{font-size:14px;font-style:italic;color:var(--mut)}
 
 /* ---------- racconto: viaggio, glossario, guide ---------- */
-.passi{list-style:none;margin:0 0 8px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:passo}
+.passi{list-style:none;margin:0 0 8px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:passo}
 .passi li{
   counter-increment:passo;background:var(--ink-2);border:1px solid var(--line);
   border-radius:4px;padding:14px;display:grid;gap:6px;align-content:start;
@@ -355,11 +355,11 @@ section > h2.sec{
 }
 .passi strong{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone)}
 .passi span{font-size:14px;font-style:italic;color:var(--mut)}
-.gloss{margin:0 0 8px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gloss{margin:0 0 8px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .gloss div{background:var(--ink-2);border:1px solid var(--line-soft);border-radius:4px;padding:12px 14px}
 .gloss dt{font-family:var(--display);font-size:19px;color:var(--bronze-hi);margin:0}
 .gloss dd{margin:2px 0 0;font-size:14.5px;color:var(--perg)}
-.due-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.due-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
 .guida{margin:0;padding:18px 20px 18px 42px;display:grid;gap:10px;font-size:16px;color:#241a0e;background:var(--ink);border:1px solid var(--line);border-radius:4px}
 .guida strong{color:var(--bronze-hi);font-weight:600}
 .terr{margin:0;padding:18px 20px 18px 40px;display:grid;gap:10px;font-size:16px;color:#241a0e;background:var(--ink);border:1px solid var(--line);border-radius:4px}
@@ -407,12 +407,12 @@ section > h2.sec{
 .x:hover{border-color:var(--bronze);color:var(--bronze)}
 .scheda h2{margin:0 52px 4px 0;font-size:clamp(1.6rem,1.1rem + 1.6vw,2.3rem);font-weight:600;text-wrap:balance}
 .sott{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:18px}
-.gal{display:grid;grid-template-columns:1.45fr 1fr;gap:16px}
+.gal{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:16px}
 .main img{width:100%;max-height:540px;object-fit:contain;background:var(--ink-2);border:1px solid var(--line);border-radius:4px;display:block}
 .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-content:start;max-height:540px;overflow:auto}
 .thumbs img{width:100%;height:88px;object-fit:cover;border-radius:3px;cursor:pointer;background:var(--ink-2);border:1px solid var(--line-soft);display:block;filter:sepia(.08)}
 .thumbs img.on{border-color:var(--bronze);box-shadow:0 0 0 1px var(--bronze)}
-.blocchi{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.blocchi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:18px}
 .blocco{background:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:16px 18px}
 .blocco.registro{border:1px solid var(--verde);border-left:4px solid var(--verde);background:#f5f5e8}
 .blocco h4{margin:0 0 8px;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze)}
