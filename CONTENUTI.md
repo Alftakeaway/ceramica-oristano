@@ -419,6 +419,15 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
   le **ceramiche di Oristano**, i tessuti di Sant'Antioco e i costumi
   tradizionali. Chiusa l'Esposizione, le ceramiche restarono a Roma: oggi
   sono nei depositi del Museo delle Civiltà.
+- **Il Padiglione della Sardegna:** progettato dal cagliaritano **Luigi
+  Scano** per la Mostra Etnografica delle Regioni a Piazza d'Armi, il
+  Padiglione riproduceva la **Torre dell'Elefante**, con echi di San
+  Domenico e delle cupole della cappella del Tesoro di Oristano; dentro,
+  due grandi sale con mobili sardi e vetrine di manufatti, oreficerie,
+  tessuti e merletti. Fuori, il **nuraghe a grandezza naturale** — con torri
+  pisane, casa aragonese di Fordongianus e case di Fonni — finì sulle
+  cartoline dell'epoca: tra i primi esempi di promozione turistica della
+  Sardegna nazionale.
 - **Testo 2:** La firma della città è il **verde e giallo su ingobbio
   bianco**: i reperti più antichi, dal monastero di Santa Chiara (XIII–XIV
   secolo), mostrano la tecnica dello *stangiu*; nel Quattrocento la coperta

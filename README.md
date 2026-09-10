@@ -7,8 +7,8 @@ del quartiere e caccia al tesoro.
 
 I reperti — raccolte etnografiche Gavino Clemente (1911) e Loria / Musei di
 Milano (1908), inv. 5206–5343 — furono riuniti per la Mostra di Etnografia
-Italiana dell'Esposizione del 1911 (50° anniversario dell'Unità d'Italia) e
-restarono a Roma.
+Italiana dell'Esposizione del 1911 (50° anniversario dell'Unità d'Italia,
+Padiglione della Sardegna dell'arch. Luigi Scano) e restarono a Roma.
 
 - **Live:** https://ceramica-oristano.vercel.app/
 - **Repo:** https://github.com/Alftakeaway/ceramica-oristano (branch `main`)
