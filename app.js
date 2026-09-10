@@ -133,7 +133,7 @@ const GLOSS = [
   ["stangiu", "coperta di ingobbio e vetrina dei reperti più antichi"],
   ["ingobbi[oi]", "sottile strato di argilla bianca sotto la vetrina"],
   ["invetriatur[ae]|vetrin[ae]", "coperta vetrosa che impermeabilizza la terracotta"],
-  ["slip-ware", "decoro tracciato con argilla bianca sul pezzo"],
+  ["cubercu", "coperchio in ceramica"],
   ["biscotto", "terracotta alla prima cottura, non ancora invetriata"]
 ];
 const GRE = new RegExp("\\b(" + GLOSS.map(g => g[0]).join("|") + ")\\b", "gi");

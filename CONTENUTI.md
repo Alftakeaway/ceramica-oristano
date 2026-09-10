@@ -67,6 +67,7 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
    La ceramica oristanese oltre la mensa.
 7. **A Oristano** (sede Oristano, accento verde, in allestimento) — Le
    ceramiche custodite a Oristano: in arrivo con le prossime fotografie.
+   Ha anche una sezione dedicata dopo Gli oggetti, con link ai prestiti.
 
 ## Gli oggetti (Catalogo ragionato · inv. 5206–5343)
 
@@ -468,6 +469,12 @@ rubinetto. Forme nate dalla mano e dal forno a legna, invetriate solo dove
 serve — il resto è argilla che si lascia guardare.
 Figura: Brocca antica, Museo archeologico di Fiesole · foto Sailko, CC BY 2.5.
 
+## A Oristano (La prossima sala · sede Oristano)
+
+Sala in allestimento: qui troveranno posto le ceramiche custodite a
+Oristano, schedate come quelle di Roma. Seguirà la sala dei prestiti e
+delle condivisioni.
+
 ## Il viaggio dell'argilla (Dal Tirso alla vetrina)
 
 1. **Cava** — Argille in riva al Tirso, come per i tegolai di Silì.
@@ -490,7 +497,7 @@ Figura: Brocca antica, Museo archeologico di Fiesole · foto Sailko, CC BY 2.5.
 - **Stangiu** — Coperta di ingobbio e vetrina dei reperti più antichi.
 - **Ingobbio** — Sottile strato di argilla bianca sotto la vetrina.
 - **Vetrina** — Coperta vetrosa che impermeabilizza la terracotta.
-- **Slip-ware** — Decoro tracciato con argilla bianca sul pezzo.
+- **Cubercu** — Coperchio in ceramica, come quelli custoditi in deposito.
 - **Biscotto** — Terracotta alla prima cottura, non ancora invetriata.
 
 ## Come leggere una scheda (Guida alla lettura)

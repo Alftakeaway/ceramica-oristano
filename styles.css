@@ -209,6 +209,11 @@ figcaption a{color:var(--bronze-hi)}
   box-shadow:0 2px 10px rgba(60,30,5,.18);
 }
 .sec-row::after{display:none}
+/* variante Oristano: bordo verde invece che terracotta */
+.sec-row.sede-or{border-left-color:var(--verde)}
+/* box sala in allestimento */
+.oristano-box{background:var(--ink);border:1px solid var(--line);border-left:6px solid var(--verde);border-radius:4px;padding:20px 22px;display:grid;gap:10px;font-size:17px}
+.oristano-box p{margin:0;color:#241a0e;max-width:70ch}
 /* titoli di sezione senza sec-row (es. storia): stesso pannello */
 section > h2.sec{
   margin:42px 0 20px;
