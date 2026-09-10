@@ -476,7 +476,6 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   .grid-obj{gap:14px}
   .passi{grid-template-columns:1fr 1fr}
   .tl{grid-template-columns:1fr 1fr}
-  .fatti{grid-template-columns:repeat(2,1fr)}
   #mappa{height:320px}
   .cmd-s{max-width:none}
   .stats{width:100%;text-align:center}
@@ -510,12 +509,6 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   background:linear-gradient(180deg,var(--bronze-hi),var(--bronze));
 }
 .indizi a{display:inline-block;margin-top:6px;color:var(--bronze-hi);font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-
-/* ---------- fatti in numeri ---------- */
-.fatti{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
-.fatti div{background:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:10px 6px;text-align:center}
-.fatti b{display:block;font-family:var(--display);font-size:26px;line-height:1.1;color:var(--terra)}
-.fatti span{font-size:12px;font-style:italic;color:var(--mut)}
 
 /* ---------- didascalia + lightbox ---------- */
 .didascalia{margin:8px 0 0;font-size:14px;font-style:italic;color:#3d2f1d;text-shadow:0 1px 0 rgba(245,239,227,.5)}

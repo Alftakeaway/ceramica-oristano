@@ -567,9 +567,7 @@ delle condivisioni.
   1908→oggi, caccia al tesoro.
 - **Dentro una scheda:** codice CO, registro virgolettato, nota del museo,
   micro-sezione foto.
-- **I numeri:** 25 schede · 39 foto · 160+ voci · 2 sedi.
-- Stampa il catalogo (PDF) · Scrivi al curatore · Nota: il pulsante stampa
-  apre la finestra del browser: scegli «Salva come PDF».
+- Stampa il catalogo (PDF) · Scrivi al curatore.
 
 ## Bibliografia e sitografia (Per studiare e approfondire)
 
