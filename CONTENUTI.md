@@ -524,6 +524,10 @@ delle condivisioni.
    ogni tipo è etichettato.
 4. **Verifica dal vivo** — misure, marchi e stato vanno sempre confermati
    in museo.
+5. **Cerca** — nome, inventario o parola del registro (gallo, 5213, Efisio).
+6. **Sala** — le 7 sale, Roma e Oristano.
+7. **Raccolta** — Clemente 1911, Loria o Milano 1908.
+8. **Tipo** — brocca, frascu, cantaro, figura, fumaiolo e altri.
 
 ## Territorio vivo (Oltre queste sale)
 
@@ -561,6 +565,9 @@ delle condivisioni.
   badge Roma (terracotta) e Oristano (verde). Catalogo aperto — 25 schede
   da Roma, Oristano in arrivo. Collezione che cresce — prestiti, timeline
   1908→oggi, caccia al tesoro.
+- **Dentro una scheda:** codice CO, registro virgolettato, nota del museo,
+  micro-sezione foto.
+- **I numeri:** 25 schede · 39 foto · 160+ voci · 2 sedi.
 - Stampa il catalogo (PDF) · Scrivi al curatore · Nota: il pulsante stampa
   apre la finestra del browser: scegli «Salva come PDF».
 
