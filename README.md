@@ -54,6 +54,8 @@ git add -A && git commit -m "msg" && git push origin main
 ```
 
 Verifica live su https://ceramica-oristano.vercel.app/ (niente anteprime locali).
+Ad ogni modifica di CSS/JS alza il versionante in `index.html`
+(`styles.css?v=N`, `catalog.js?v=N`, `app.js?v=N`) contro la cache dei browser.
 
 ## Crediti
 

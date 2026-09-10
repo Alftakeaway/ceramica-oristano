@@ -456,7 +456,7 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   .blocchi{grid-template-columns:1fr}
   .storia-grid{grid-template-columns:1fr}
   .storia-side{position:static}
-  .mestiere{grid-template-columns:1fr}
+  .mestiere{grid-template-columns:minmax(0,1fr)}
   .topbar-in{grid-template-columns:1fr;grid-template-areas:"brand" "nav" "stats"}
   .topnav{justify-self:start;flex-wrap:wrap}
   .stats{justify-self:start}
