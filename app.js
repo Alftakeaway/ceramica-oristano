@@ -185,7 +185,7 @@ function apri(id){
   const tipi = [...new Set(o.foto.map(fotoTipo))].join(', ');
   $('#scheda').innerHTML = `
     <h2><span class="cod big">${o.codice || ''}</span> ${o.titolo}</h2>
-    <div class="sott">${cat.sede === 'oristano' ? '<span class="badge sede-or">Oristano</span>' : '<span class="badge sede-roma">Roma</span>'} <span class="badge">${cat.titolo}</span> · ${etichettaMedia(o)} in questa micro-sezione · vedute: ${tipi} · inv. <strong>${o.info.inventario}</strong></div>
+    <div class="sott"><a href="#oggetti" id="crumbHome">Schede</a> › <a href="#" id="crumbCat">${cat.titolo}</a> › <strong>${o.codice || ''}</strong> ${cat.sede === 'oristano' ? '<span class="badge sede-or">Oristano</span>' : '<span class="badge sede-roma">Roma</span>'} · ${etichettaMedia(o)} in questa micro-sezione · vedute: ${tipi} · inv. <strong>${o.info.inventario}</strong></div>
     <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}" alt="${o.titolo}"></div><div class="conta" id="contaFoto"></div><p class="didascalia" id="didascalia"></p><p class="zoom-hint">Clicca sulla foto per ingrandirla a tutto schermo</p></div>
     <div class="thumbs" id="thumbs">${o.foto.map((f, i) => `<img data-i="${i}" class="${i === 0 ? 'on' : ''}" loading="lazy" src="${enc(f)}" alt="${o.titolo} — ${fotoTipo(f)}" title="${fotoTipo(f)} — ${f}">`).join('')}</div></div>
     <div class="blocchi">
@@ -196,6 +196,8 @@ function apri(id){
       <div class="blocco lungo vedi"><h4>Vedi anche</h4><p>${C.oggetti.filter(x => x.categoria === o.categoria && x.id !== o.id).slice(0, 3).map(x => `<a href="#scheda-${x.id}">${x.codice} — ${x.titolo}</a>`).join(' · ')}</p><button class="btn" id="condividi">Condividi questa scheda</button></div>
     </div>`;
   document.querySelectorAll('#thumbs [data-i]').forEach(im => im.onclick = () => mostraFoto(+im.dataset.i));
+  const cc = $('#crumbCat');
+  if(cc) cc.onclick = e => { e.preventDefault(); chiudiScheda(); filtroCat = o.categoria; syncFiltri(); const og = document.getElementById('oggetti'); if(og) og.scrollIntoView({ behavior: 'smooth' }); };
   mostraFoto(0);
   const sh = $('#condividi');
   if(sh) sh.onclick = async () => {

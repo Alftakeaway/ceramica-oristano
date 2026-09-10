@@ -414,6 +414,7 @@ section > h2.sec{
 .x:hover{border-color:var(--bronze);color:var(--bronze)}
 .scheda h2{margin:0 52px 4px 0;font-size:clamp(1.6rem,1.1rem + 1.6vw,2.3rem);font-weight:600;text-wrap:balance}
 .sott{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:18px}
+.sott a{text-decoration:underline;text-underline-offset:2px}
 .gal{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:16px}
 .main img{width:100%;max-height:540px;object-fit:contain;background:var(--ink-2);border:1px solid var(--line);border-radius:4px;display:block}
 .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-content:start;max-height:540px;overflow:auto}

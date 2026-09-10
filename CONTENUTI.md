@@ -44,6 +44,8 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
    il Museo delle Civiltà di Roma custodisce la collezione Clemente e Loria,
    tra buste, scaffali e numeri di magazzino. (CO008, CO002, CO009, CO013
    + link al Padiglione del 1911)
+4. **Il museo in 10 minuti: 5 tappe** — CO001 la sposa, CO004 il viaggio,
+   CO006 la devozione, CO009 il tetto, CO013 il camino.
 
 ## Le sale (Percorso espositivo · Roma + Oristano)
 
