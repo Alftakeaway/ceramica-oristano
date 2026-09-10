@@ -44,6 +44,8 @@ body::before{
 }
 ::selection{background:var(--bronze);color:#fff}
 .wrap{max-width:1200px;margin:0 auto;padding:0 22px;position:relative;z-index:6}
+/* le colonne delle griglie non devono mai forzare la larghezza */
+.hero > *, .storia-grid > *, .mestiere > *, .due-col > *, .gal > *, .sedi > *{min-width:0}
 header.topbar,.hero,.storia,main,footer,.meandro{position:relative;z-index:6}
 h1,h2,h3{font-family:var(--display);letter-spacing:.005em}
 a{color:var(--bronze-hi)}
