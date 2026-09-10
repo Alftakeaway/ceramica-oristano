@@ -157,7 +157,8 @@ a{color:var(--bronze-hi)}
 /* ---------- storia ---------- */
 .storia{padding-top:30px}
 .storia-grid{display:grid;grid-template-columns:1fr 2.1fr;gap:28px;align-items:start}
-.storia-side{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:20px}
+.storia-side{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:20px;align-self:start;position:sticky;top:250px}
+.storia-side .fig-storia + .fig-storia{margin-top:22px}
 .storia-tx{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:22px 24px}
 .storia-lede{font-family:var(--display);font-size:25px;line-height:1.35;color:#4a2f0c;margin:0 0 18px;font-weight:600;text-shadow:0 1px 0 rgba(245,239,227,.55)}
 /* figura storica nella colonna laterale */
@@ -412,6 +413,7 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   .gal{grid-template-columns:1fr}
   .blocchi{grid-template-columns:1fr}
   .storia-grid{grid-template-columns:1fr}
+  .storia-side{position:static}
   .mestiere{grid-template-columns:1fr}
   .topbar-in{grid-template-columns:1fr;grid-template-areas:"brand" "nav" "stats"}
   .topnav{justify-self:start;flex-wrap:wrap}
