@@ -264,6 +264,10 @@ section > h2.sec{
 }
 .badge.inv{background:var(--terra);border-color:var(--terra);color:var(--terra-ink);font-weight:700}
 .badge.annuncio{background:var(--verde);border-color:var(--verde);color:#fff;font-weight:700}
+/* sede degli oggetti: Roma terracotta, Oristano verde */
+.badge.sede-roma{background:var(--terra);border-color:var(--terra);color:#fff;font-weight:700}
+.badge.sede-or{background:var(--verde);border-color:var(--verde);color:#fff;font-weight:700}
+.sedi-riga{display:flex;gap:6px;flex-wrap:wrap}
 .grid-obj{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
 .obj{
   background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
@@ -314,6 +318,24 @@ section > h2.sec{
 .perc li{margin:5px 0}
 .perc a{color:var(--bronze-hi)}
 
+/* ---------- dove sono: Roma / Oristano / comunità ---------- */
+.sedi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 20px}
+.sede{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:14px 16px;display:grid;gap:4px;align-content:start}
+.sede.roma{border-top:3px solid var(--terra)}
+.sede.oristano{border-top:3px solid var(--verde)}
+.sede.comunita{border-top:3px solid var(--bronze)}
+.sede strong{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone)}
+.sede span{font-size:15px;font-style:italic;color:var(--perg)}
+
+/* ---------- timeline 1908-oggi ---------- */
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.tl li{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:14px;display:grid;gap:6px;align-content:start;border-top:3px solid var(--terra)}
+.tl li.futuro{border-top-color:var(--verde)}
+.tl .anno{font-family:var(--display);font-size:26px;color:var(--terra);border-bottom:1px solid var(--line-soft);padding-bottom:6px}
+.tl li.futuro .anno{color:var(--verde)}
+.tl strong{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone)}
+.tl span:last-child{font-size:14px;font-style:italic;color:var(--mut)}
+
 /* ---------- racconto: viaggio, glossario, guide ---------- */
 .passi{list-style:none;margin:0 0 8px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:passo}
 .passi li{
@@ -350,6 +372,12 @@ section > h2.sec{
 /* vedi-anche + condivisione in scheda */
 .vedi a{color:var(--bronze-hi);font-size:15px}
 .vedi .btn{margin-top:12px;max-width:320px}
+
+/* ---------- mini-scheda Padiglione 1911 ---------- */
+.padiglione{background:var(--ink-2);border:1px solid var(--line);border-left:4px solid var(--terra);border-radius:4px;padding:16px 18px;margin:16px 0}
+.padiglione h4{margin:0 0 8px;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze)}
+.padiglione ul{margin:0;padding-left:20px;display:grid;gap:6px;font-size:16px;color:var(--bone)}
+.padiglione strong{color:var(--terra)}
 
 /* ---------- mappa ---------- */
 .mappa-wrap{border:1px solid var(--line);border-radius:2px;overflow:hidden}
@@ -413,6 +441,8 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   .hero{grid-template-columns:1fr}
   .perc-grid{grid-template-columns:1fr}
   .passi{grid-template-columns:repeat(2,1fr)}
+  .tl{grid-template-columns:repeat(2,1fr)}
+  .sedi{grid-template-columns:1fr}
   .gloss{grid-template-columns:1fr 1fr}
   .due-col{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr}
@@ -431,6 +461,7 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   .hero{padding-top:30px}
   .grid-obj{gap:14px}
   .passi{grid-template-columns:1fr 1fr}
+  .tl{grid-template-columns:1fr 1fr}
   #mappa{height:320px}
   .cmd-s{max-width:none}
   .stats{width:100%;text-align:center}

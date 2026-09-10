@@ -112,7 +112,8 @@ function renderOggetti(){
   list.forEach(o => {
     const cat = C.categorie[o.categoria];
     const d = document.createElement('div'); d.className = 'obj' + (cat.sede === 'oristano' ? ' sede-or' : '');
-    d.innerHTML = `<img loading="lazy" src="${enc(o.foto[0])}" alt="${o.titolo}"><div class="t"><span class="badge">${cat.titolo} · ${etichettaMedia(o)}</span><h3><span class="cod">${o.codice || ''}</span> ${o.titolo}</h3><div class="meta">inv. ${o.info.inventario} · ${o.info.data_ingresso} · ${o.info.autore}</div><button class="btn">Apri scheda museo →</button></div>`;
+    const sede = cat.sede === 'oristano' ? '<span class="badge sede-or">Oristano</span>' : '<span class="badge sede-roma">Roma</span>';
+    d.innerHTML = `<img loading="lazy" src="${enc(o.foto[0])}" alt="${o.titolo}"><div class="t"><div class="sedi-riga">${sede}<span class="badge">${cat.titolo} · ${etichettaMedia(o)}</span></div><h3><span class="cod">${o.codice || ''}</span> ${o.titolo}</h3><div class="meta">inv. ${o.info.inventario} · ${o.info.data_ingresso} · ${o.info.autore}</div><button class="btn">Apri scheda museo →</button></div>`;
     d.querySelector('img').onclick = () => apri(o.id);
     d.querySelector('.btn').onclick = () => apri(o.id);
     g.appendChild(d);
@@ -184,7 +185,7 @@ function apri(id){
   const tipi = [...new Set(o.foto.map(fotoTipo))].join(', ');
   $('#scheda').innerHTML = `
     <h2><span class="cod big">${o.codice || ''}</span> ${o.titolo}</h2>
-    <div class="sott"><span class="badge">${cat.titolo}</span> · ${etichettaMedia(o)} in questa micro-sezione · vedute: ${tipi} · inv. <strong>${o.info.inventario}</strong></div>
+    <div class="sott">${cat.sede === 'oristano' ? '<span class="badge sede-or">Oristano</span>' : '<span class="badge sede-roma">Roma</span>'} <span class="badge">${cat.titolo}</span> · ${etichettaMedia(o)} in questa micro-sezione · vedute: ${tipi} · inv. <strong>${o.info.inventario}</strong></div>
     <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}" alt="${o.titolo}"></div><div class="conta" id="contaFoto"></div><p class="didascalia" id="didascalia"></p></div>
     <div class="thumbs" id="thumbs">${o.foto.map((f, i) => `<img data-i="${i}" class="${i === 0 ? 'on' : ''}" loading="lazy" src="${enc(f)}" title="${fotoTipo(f)} — ${f}">`).join('')}</div></div>
     <div class="blocchi">

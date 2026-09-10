@@ -41,9 +41,10 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
    invetriata solo dove serve. (CO004, CO021, CO023, CO006, CO003, CO005)
 3. **Dietro le quinte: il mestiere** — Depositi, scaffali e cartellini: come
    il Museo delle Civiltà di Roma custodisce la collezione Clemente e Loria,
-   tra buste, scaffali e numeri di magazzino. (CO008, CO002, CO009, CO013)
+   tra buste, scaffali e numeri di magazzino. (CO008, CO002, CO009, CO013
+   + link al Padiglione del 1911)
 
-## Le sale (Percorso espositivo · sale I–VI)
+## Le sale (Percorso espositivo · Roma + Oristano)
 
 1. **Brocche della sposa** — Le produzioni straordinarie dei figoli: anfore
    a 4 manici con beccucci, angeli e fiori a rilievo, corone traforate.
@@ -68,6 +69,9 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
    ceramiche custodite a Oristano: in arrivo con le prossime fotografie.
 
 ## Gli oggetti (Catalogo ragionato · inv. 5206–5343)
+
+Ogni card e ogni scheda porta il badge di sede: **Roma** (terracotta) per
+i 25 pezzi del Museo delle Civiltà, **Oristano** (verde) per i futuri.
 
 ### CO001 — Brocca a 4 manici con angeli e fiori («della sposa»)
 
@@ -441,8 +445,20 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
   25 aprile 1692**, **Società della Santissima Trinità** dopo il 1864 —
   tradizione viva con AiCC (dal 2002), centro **Terracotta** (2018),
   Ecomuseo del 2025 e mostra di Palazzo degli Scolopi.
+- **Il Padiglione in breve (box):** Architettura — Torre dell'Elefante,
+  San Domenico, cupole del Tesoro di Oristano. Dentro — due sale con mobili
+  sardi; manufatti, oreficerie, tessuti e merletti. Fuori — nuraghe dal
+  vero, torri pisane, casa di Fordongianus, case di Fonni.
 - **Fonti:** Comune di Oristano · AiCC — Buongiorno Ceramica ·
   Google Arts & Culture.
+
+## 1908 → oggi (Il filo del tempo)
+
+1. **1908 — Loria a Milano:** fraschi, cantari e stoviglie d'uso.
+2. **1911 — Clemente + Esposizione:** brocche della sposa; Padiglione Scano e nuraghe dal vero.
+3. **1911–oggi — Un secolo a Roma:** nei depositi del Museo delle Civiltà.
+4. **Oggi — Il progetto First:** Claudia Origoni ritrova le opere.
+5. **Domani — Oristano + comunità:** nuove schede e prestiti condivisi.
 
 ## Il mestiere e le forme (Forme del catalogo / Brocche, fraschi, cantari)
 
@@ -498,6 +514,10 @@ Figura: Brocca antica, Museo archeologico di Fiesole · foto Sailko, CC BY 2.5.
 
 ## Il progetto (Chi siamo · missione · crediti)
 
+- **Dove sono (box):** A Roma — Museo delle Civiltà · 25 schede · 39 foto.
+  A Oristano — sala in allestimento. Dalla comunità — prestiti e
+  condivisioni.
+
 - **Un museo digitale per i figoli:** Ceramica Oristano nasce per portare
   fuori dai depositi romani le ceramiche oristanesi: l'elenco d'inventario
   (oltre 160 voci tra coll. Clemente 1911 e Loria/Milano 1908) diventa un
@@ -542,6 +562,12 @@ verificare. Vince chi li trova tutti e sei!
 4. Ho un rubinetto e il nome di un santo. → CO006
 5. Corro con un fantoccio in groppa. → CO009
 6. Sono un camino con un omino seduto in cima. → CO013
+
+## Presta o condividi un pezzo (La collezione cresce)
+
+Hai in casa una ceramica oristanese? Fotografa (insieme, dettagli, fondi e
+scritte), racconta (misure, provenienza, storia in famiglia), invia al
+curatore via mail. Bottone "Proponi un oggetto".
 
 ## Il quartiere dei figoli (Su brugu de sos congiolargios)
 

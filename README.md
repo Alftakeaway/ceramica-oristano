@@ -2,8 +2,9 @@
 
 Museo digitale delle ceramiche oristanesi custodite al **Museo delle
 Civiltà di Roma**: 25 schede d'inventario (CO001–CO025) con 39 fotografie,
-7 sale (6 a Roma + 1 in arrivo a Oristano), percorsi tematici, storia dei
-figoli, glossario, mappa del quartiere e caccia al tesoro.
+7 sale (6 a Roma + 1 in arrivo a Oristano), percorsi tematici, timeline
+1908→oggi, storia dei figoli, glossario, box "dove sono", sezione
+prestiti/condivisioni, mappa del quartiere e caccia al tesoro.
 
 I reperti — raccolte etnografiche Gavino Clemente (1911) e Loria / Musei di
 Milano (1908), inv. 5206–5343 — furono riuniti per la Mostra di Etnografia
