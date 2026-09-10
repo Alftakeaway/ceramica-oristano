@@ -4,7 +4,7 @@ Tutti i testi di https://ceramica-oristano.vercel.app/ in un unico file.
 Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
 
 > I reperti (inv. 5206–5343) sono oristanesi ma si trovano a Roma, al Museo
-> delle Civiltà: raccolti per la Mostra di Etnografia Italiana
+> delle Civiltà di Roma: raccolti per la Mostra di Etnografia Italiana
 > dell'Esposizione del 1911 (50° anniversario dell'Unità d'Italia), vi
 > restarono e lì sono custoditi.
 
@@ -23,10 +23,9 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
 
 - **Kicker:** Oristano, quartiere dei figoli dal Cinquecento
 - **Titolo:** La ceramica di Oristano, oggetto per oggetto.
-- **Testo:** Ogni scheda riunisce **tutte le foto disponibili** dell'oggetto —
-  insieme, dettagli, fondi e scritte — con la **descrizione originale del
-  registro d'inventario** (Comune di Oristano, coll. Clemente 1911 /
-  Loria-Milano   1908) e una nota sulla tradizione dei *figoli*.
+- **Testo:** Ogni scheda riunisce **tutte le foto disponibili** (Museo delle
+  Civiltà di Roma, coll. Clemente 1911 / Loria-Milano 1908 e Comune di
+  Oristano) più nota sulla tradizione dei *figoli*.
 - **Bottoni hero:** Inizia la visita (guidata 1/5) · Vedi dove siamo · Proponi un oggetto
 - **Visita guidata:** 5 tappe (sposa, viaggio, devozione, tetto, camino) con frecce, contatore e link alla scheda completa
 - **Schede a due livelli:** descrizione + dettagli visibili; registro, nota di catalogo ed elenco foto dietro "Approfondimento scientifico"
@@ -79,7 +78,7 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
 ## Gli oggetti (Catalogo ragionato · inv. 5206–5343)
 
 Ogni card e ogni scheda porta il badge di sede: **Roma** (terracotta) per
-i 25 pezzi del Museo delle Civiltà, **Oristano** (verde) per i futuri.
+i 25 pezzi del Museo delle Civiltà di Roma, **Oristano** (verde) per i futuri.
 
 ### CO001 — Brocca a 4 manici con angeli e fiori («della sposa»)
 
@@ -415,8 +414,9 @@ i 25 pezzi del Museo delle Civiltà, **Oristano** (verde) per i futuri.
 ## Oristano, città della ceramica
 
 - **Lede:** Argille locali, forni a legna, colature di vetrina verde e gialla.
-- **Figura:** La foggiatura al tornio — incisione dal *Dictionnaire de chimie
-  industrielle*, 1864 · pubblico dominio via Wikimedia Commons.
+- **Figura 1:** La foggiatura al tornio — incisione 1864, pubblico dominio.
+- **Figura 2:** Un nuraghe integro (come quello riprodotto dal vero nel 1911) ·
+  foto N8eule78, CC BY-SA 4.0, via Wikimedia Commons.
 - **Testo 1:** Dal **quartiere dei figoli** — *su brugu de sos
   congiolargios*, attestato già nel Cinquecento — escono da secoli le
   invetriate verdi e gialle d'Oristano. Accanto alle stoviglie d'uso (fraschi
@@ -429,10 +429,10 @@ i 25 pezzi del Museo delle Civiltà, **Oristano** (verde) per i futuri.
   Etnografia Italiana dell'Esposizione del 1911: la grande rassegna per i 50
   anni dell'Unità d'Italia, con i monumenti delle regioni ricostruiti a
   grandezza naturale e le produzioni artistiche e artigianali di tutta
-  Italia. La Sardegna c'era con il nuraghe di Barumini riprodotto dal vero,
+  Italia. La Sardegna c'era con il nuraghe riprodotto dal vero,
   le **ceramiche di Oristano**, i tessuti di Sant'Antioco e i costumi
   tradizionali. Chiusa l'Esposizione, le ceramiche restarono a Roma: oggi
-  sono nei depositi del Museo delle Civiltà.
+  sono nei depositi del Museo delle Civiltà di Roma.
 - **Il Padiglione della Sardegna:** progettato dal cagliaritano **Luigi
   Scano** per la Mostra Etnografica delle Regioni a Piazza d'Armi, il
   Padiglione riproduceva la **Torre dell'Elefante**, con echi di San
@@ -464,8 +464,9 @@ i 25 pezzi del Museo delle Civiltà, **Oristano** (verde) per i futuri.
 
 1. **1908 — Loria a Milano:** fraschi, cantari e stoviglie d'uso.
 2. **1911 — Clemente + Esposizione:** brocche della sposa; Padiglione Scano e nuraghe dal vero.
-3. **1911–oggi — Un secolo a Roma:** nei depositi del Museo delle Civiltà.
-4. **Oggi — Il progetto First:** Claudia Origoni ritrova le opere.
+3. **1911–oggi — Un secolo a Roma:** nei depositi del Museo delle Civiltà di Roma.
+4. **Oggi — Il progetto First:** la First recupera le foto delle opere del
+   Museo delle Civiltà di Roma e con il Comune ne digitalizza i contenuti.
 5. **Domani — Oristano + comunità:** nuove schede e prestiti condivisi.
 
 ## Il mestiere e le forme (Forme del catalogo / Brocche, fraschi, cantari)
@@ -494,7 +495,8 @@ Fonti: S&H Magazine (2023), SardegnaCultura.
 
 Sala in allestimento: qui troveranno posto le ceramiche custodite a
 Oristano, schedate come quelle di Roma. Seguirà la sala dei prestiti e
-delle condivisioni.
+delle condivisioni: partecipa ad accrescere le opere dell'anima sarda,
+proponi con orgoglio il tuo pezzo oristanese.
 
 ## Il viaggio dell'argilla (Dal Tirso alla vetrina)
 
@@ -546,25 +548,25 @@ delle condivisioni.
 
 ## Il progetto (Chi siamo · missione · crediti)
 
-- **Dove sono (box):** A Roma — Museo delle Civiltà · 25 schede · 39 foto.
-  A Oristano — sala in allestimento. Dalla comunità — prestiti e
+- **Dove sono (box):** A Roma — Museo delle Civiltà di Roma · 25 schede ·
+  39 foto. A Oristano — sala in allestimento. Dalla comunità — prestiti e
   condivisioni.
 
-- **Un museo digitale per i figoli:** Ceramica Oristano nasce per portare
-  fuori dai depositi romani le ceramiche oristanesi: l'elenco d'inventario
-  (oltre 160 voci tra coll. Clemente 1911 e Loria/Milano 1908) diventa un
-  catalogo da sfogliare, dove ogni fotografia è ricongiunta alla sua
-  descrizione originale. Obiettivo triplice: **documentare** con rigore,
-  **raccontare** con parole semplici, **invitare** a vedere gli originali
-  al Museo delle Civiltà di Roma.
+- **Sul filo della Memoria: un museo digitale per i figoli:** Ceramica
+  Oristano nasce per restituire la memoria del patrimonio artistico
+  oristanese, condividendo le opere del Museo delle Civiltà di Roma, del
+  museo di Oristano e delle case e famiglie sarde nel mondo.
+  Riappropriazione di identità e censimento, per collegare sul filo della
+  memoria la comunità sarda dispersa: museo virtuale e diffuso, in
+  espansione e interattivo, dove l'innovazione è strumento della tradizione.
 - **Chi lo cura:** Ideazione e progettazione — Dott.ssa Claudia Origoni.
   Gestione eventi — First Srl. Tutela scientifica — Dott.ssa Ludovica
-  Piazzi, storica dell'arte del Museo delle Civiltà (MUCIV), Roma.
-  Fotografie — Museo delle Civiltà e First Srl. Amministrazione comunale —
+  Piazzi, storica dell'arte del Museo delle Civiltà di Roma (MUCIV).
+  Fotografie — Museo delle Civiltà di Roma e First Srl. Amministrazione comunale —
   Massimiliano Sanna (sindaco), Valentina de Seneen (assessora alle Attività
   produttive). Associazionismo — Pupa (Maria Giuseppina) Tarantini,
   presidente Fidapa. Webmaster — Alfredo Forte. Riferimenti istituzionali:
-  Museo delle Civiltà, Comune di Oristano, Antiquarium Arborense, Oristano
+  Museo delle Civiltà di Roma, Comune di Oristano, Antiquarium Arborense, Oristano
   Città della Ceramica (AiCC).
 - **Come è fatto:** Trascrizione fedele — ogni scheda riporta tra
   virgolette la voce del registro. Foto e inventario insieme — la
@@ -617,5 +619,5 @@ Ceramica Oristano — Museo della Ceramica. Schede a scopo espositivo e
 documentativo. Descrizioni d'inventario trascritte dal registro comunale;
 attribuzioni storiche da verificare dal vivo. 39 fotografie · 25 schede ·
 inv. 5206–5343 (Clemente 1911, Loria/Milano 1908) · reperti al Museo delle
-Civiltà, Roma · materiali dal Comune di Oristano.
+Civiltà di Roma · materiali dal Comune di Oristano.
 Designed & Developed by alfredoforte.web@gmail.com.

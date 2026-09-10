@@ -61,9 +61,9 @@ Ad ogni modifica di CSS/JS alza il versionante in `index.html`
 
 - Ideazione e progettazione — Dott.ssa Claudia Origoni
 - Gestione eventi — First Srl
-- Tutela scientifica — Dott.ssa Ludovica Piazzi (Museo delle Civiltà, Roma)
-- Reperti — Museo delle Civiltà, Roma (raccolte Clemente 1911, Loria/Milano 1908)
-- Fotografie — Museo delle Civiltà e First Srl
+- Tutela scientifica — Dott.ssa Ludovica Piazzi (Museo delle Civiltà di Roma)
+- Reperti — Museo delle Civiltà di Roma (raccolte Clemente 1911, Loria/Milano 1908)
+- Fotografie — Museo delle Civiltà di Roma e First Srl
 - Amministrazione comunale — Massimiliano Sanna (sindaco), Valentina de
   Seneen (assessora Attività produttive)
 - Associazionismo — Pupa Tarantini (presidente Fidapa)
