@@ -245,6 +245,9 @@ section > h2.sec{
 .cat:hover{transform:translateY(-3px);border-color:var(--bronze)}
 .cat img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--ink-2);filter:sepia(.08) contrast(1.01)}
 .cat .t{padding:15px 16px 16px;border-top:3px solid var(--terra)}
+/* sede Oristano: accento verde invece che terracotta */
+.cat.sede-or .t{border-top:3px solid var(--verde)}
+.cat.soon img{object-fit:contain;background:var(--ink);padding:12px}
 .cat .t h3{margin:9px 0 4px;font-size:21px;font-weight:600}
 .cat .t p{font-size:14.5px;font-style:italic;color:var(--mut);margin:0}
 .car-btn{
@@ -260,6 +263,7 @@ section > h2.sec{
   background:var(--ink-2);border:1px solid var(--line);border-radius:2px;padding:4px 10px;color:var(--mut);
 }
 .badge.inv{background:var(--terra);border-color:var(--terra);color:var(--terra-ink);font-weight:700}
+.badge.annuncio{background:var(--verde);border-color:var(--verde);color:#fff;font-weight:700}
 .grid-obj{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
 .obj{
   background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
@@ -268,6 +272,7 @@ section > h2.sec{
 .obj:hover{transform:translateY(-3px);border-color:var(--bronze)}
 .obj img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--ink-2);cursor:zoom-in;display:block;filter:sepia(.08) contrast(1.01)}
 .obj .t{padding:15px 16px 16px;display:flex;flex-direction:column;gap:9px;flex:1;border-top:1px solid var(--line-soft)}
+.obj.sede-or .t{border-top:1px solid var(--verde)}
 .obj h3{margin:0;font-family:var(--display);font-size:19px;font-weight:600;line-height:1.35}
 .cod{
   display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;

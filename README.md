@@ -2,8 +2,8 @@
 
 Museo digitale delle ceramiche oristanesi custodite al **Museo delle
 Civiltà di Roma**: 25 schede d'inventario (CO001–CO025) con 39 fotografie,
-6 sale espositive, percorsi tematici, storia dei figoli, glossario, mappa
-del quartiere e caccia al tesoro.
+7 sale (6 a Roma + 1 in arrivo a Oristano), percorsi tematici, storia dei
+figoli, glossario, mappa del quartiere e caccia al tesoro.
 
 I reperti — raccolte etnografiche Gavino Clemente (1911) e Loria / Musei di
 Milano (1908), inv. 5206–5343 — furono riuniti per la Mostra di Etnografia
@@ -34,7 +34,10 @@ Padiglione della Sardegna dell'arch. Luigi Scano) e restarono a Roma.
    `inventario/oggetto/soggetto/materia/data_ingresso/autore/descrizione/dettagli`).
 2. **Nuove foto:** mettile in `assets/` (max 1600px lato lungo),
    elencale nell'array `foto` della scheda.
-3. **Nuova sala:** aggiungi una voce a `categorie` in `catalog.js`.
+3. **Nuova sala:** aggiungi una voce a `categorie` in `catalog.js` con
+   `titolo`, `sede` (`roma` = accento terracotta, `oristano` = accento
+   verde) e `descr`. Con `prossimamente: true` e zero oggetti la sala
+   appare come "In arrivo".
 4. JSON-LD, sitemap e conteggi footer si aggiornano a mano.
 
 Hook JS da non rompere: `#q #filtroCat #filtroRac #filtroTipo #gridCat

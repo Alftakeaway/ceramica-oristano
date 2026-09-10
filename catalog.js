@@ -1,29 +1,41 @@
 window.CATALOGO = {
  "categorie": {
-  "brocche-spose": {
-   "titolo": "Brocche della sposa",
-   "descr": "Le produzioni straordinarie dei figoli: anfore a 4 manici con beccucci, angeli e fiori a rilievo, corone traforate. Donate per le nozze, capolavori di foggiatura e scultura in verde e giallo."
-  },
-  "uso-quotidiano": {
-   "titolo": "Brocche d'uso quotidiano",
-   "descr": "Stoviglie da mensa e da trasporto: brocca-gallo, brocca a fregi incisi, frascu schiacciato da viaggio. Terracotta ingobbiata e invetriata, colature giallo-verdi."
-  },
-  "acqua-cucina": {
-   "titolo": "Acqua e cucina",
-   "descr": "Cantari con rubinetto, scolapasta e vasi per grassi: la cucina oristanese in terracotta. Invetriature verdi all'interno, scritte devozionali come EFISIO."
-  },
-  "dietro-quinte": {
-   "titolo": "Dietro le quinte",
-   "descr": "Vetrine e depositi del Museo delle Civiltà di Roma: scaffali Sardegna, cartellini d'inventario 52xx–53xx, buste di conservazione. Come il museo custodisce la collezione."
-  },
-  "figure": {
-   "titolo": "Figure e cavallucci",
-   "descr": "Cavalli con fantoccio in ceramica invetriata: la tradizione del «Su Cavalluccio» oristanese, figura propiziatoria collocata sui crinali dei tetti e nelle case. Serie 5206–5210, coll. Clemente 1911."
-  },
-  "casa-focolare": {
-   "titolo": "Casa e focolare",
-   "descr": "Fumaioli da camino in biscotto di terracotta: dal torrino conico forato al grande fumaiolo figurato con uomo seduto. La ceramica oristanese oltre la mensa."
-  }
+   "brocche-spose": {
+    "titolo": "Brocche della sposa",
+    "sede": "roma",
+    "descr": "Le produzioni straordinarie dei figoli: anfore a 4 manici con beccucci, angeli e fiori a rilievo, corone traforate. Donate per le nozze, capolavori di foggiatura e scultura in verde e giallo."
+   },
+   "uso-quotidiano": {
+    "titolo": "Brocche d'uso quotidiano",
+    "sede": "roma",
+    "descr": "Stoviglie da mensa e da trasporto: brocca-gallo, brocca a fregi incisi, frascu schiacciato da viaggio. Terracotta ingobbiata e invetriata, colature giallo-verdi."
+   },
+   "acqua-cucina": {
+    "titolo": "Acqua e cucina",
+    "sede": "roma",
+    "descr": "Cantari con rubinetto, scolapasta e vasi per grassi: la cucina oristanese in terracotta. Invetriature verdi all'interno, scritte devozionali come EFISIO."
+   },
+   "dietro-quinte": {
+    "titolo": "Dietro le quinte",
+    "sede": "roma",
+    "descr": "Vetrine e depositi del Museo delle Civiltà di Roma: scaffali Sardegna, cartellini d'inventario 52xx–53xx, buste di conservazione. Come il museo custodisce la collezione."
+   },
+   "figure": {
+    "titolo": "Figure e cavallucci",
+    "sede": "roma",
+    "descr": "Cavalli con fantoccio in ceramica invetriata: la tradizione del «Su Cavalluccio» oristanese, figura propiziatoria collocata sui crinali dei tetti e nelle case. Serie 5206–5210, coll. Clemente 1911."
+   },
+   "casa-focolare": {
+    "titolo": "Casa e focolare",
+    "sede": "roma",
+    "descr": "Fumaioli da camino in biscotto di terracotta: dal torrino conico forato al grande fumaiolo figurato con uomo seduto. La ceramica oristanese oltre la mensa."
+   },
+   "a-oristano": {
+    "titolo": "A Oristano",
+    "sede": "oristano",
+    "prossimamente": true,
+    "descr": "Le ceramiche custodite a Oristano: sala in allestimento, in arrivo con le prossime fotografie. Accento verde, sede Oristano."
+   }
  },
  "oggetti": [
   {

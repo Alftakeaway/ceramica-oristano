@@ -6,9 +6,10 @@ const CONTESTI = {
  'brocche-spose': 'Le «brocche della sposa» sono il vertice dei figoli oristanesi (su brugu de sos congiolargios, dal XVI secolo): anfore a 4 manici con beccucci, angeli, fiori e corone traforate, invetriate in verde con colature gialle. Dono nuziale, più da parata che da uso.',
  'uso-quotidiano': 'Stoviglie da mensa e da trasporto dei figoli: terracotta ingobbiata, decorazioni impresse a rotella (onde, ovoli, rosette), vetrina giallo-verde solo dove serve. Forme zoomorfe (gallo) e schiacciate da viaggio (frascu).',
  'acqua-cucina': 'Cantari con rubinetto, scolapasta e vasi per grassi: la cucina in terracotta. Interno ingobbiato e invetriato in verde, esterno spesso in biscotto; scritte devozionali (EFISIO) e numeri di magazzino dipinti.',
- 'dietro-quinte': 'Depositi e vetrine: scaffali «129 Sardegna», buste di conservazione, cartellini 52xx–53xx. Collezioni Clemente (1911) e Loria/Milano (1908) dei musei oristanesi.',
+ 'dietro-quinte': 'Depositi e vetrine del Museo delle Civiltà di Roma: scaffali «129 Sardegna», buste di conservazione, cartellini 52xx–53xx. Collezioni Clemente (1911) e Loria/Milano (1908).',
  'figure': 'Cavalli con fantoccio in ceramica invetriata: la tradizione del «Su Cavalluccio» oristanese, figura equestre propiziatoria un tempo collocata sui crinali dei tetti e nelle case. Serie 5206–5210, coll. Clemente 1911.',
- 'casa-focolare': 'Fumaioli da camino in biscotto di terracotta, dal torrino conico forato al grande fumaiolo figurato: la ceramica oristanese oltre la mensa, sui tetti della città.'
+ 'casa-focolare': 'Fumaioli da camino in biscotto di terracotta, dal torrino conico forato al grande fumaiolo figurato: la ceramica oristanese oltre la mensa, sui tetti della città.',
+ 'a-oristano': 'Le ceramiche custodite a Oristano: sala in allestimento. Qui troveranno posto gli oggetti in città e, in futuro, i pezzi prestati e condivisi dalla comunità.'
 };
 
 function fotoTipo(nome){
@@ -38,15 +39,18 @@ function tipoDi(o){
   return t.charAt(0).toUpperCase() + t.slice(1);
 }
 function etichettaMedia(o){ return o.foto.length + (o.foto.length > 1 ? ' foto' : ' foto'); }
-function coverDi(cat){ const o = C.oggetti.find(x => x.categoria === cat); return o ? enc(o.foto[0]) : ''; }
+function coverDi(cat){ const o = C.oggetti.find(x => x.categoria === cat); return o ? enc(o.foto[0]) : enc('logo-museo-icon.png'); }
 
 function renderCategorie(){
   const g = $('#gridCat'); g.innerHTML = '';
   Object.entries(C.categorie).forEach(([id, cat]) => {
     const n = C.oggetti.filter(o => o.categoria === id).length;
     const f = C.oggetti.filter(o => o.categoria === id).reduce((a, o) => a + o.foto.length, 0);
-    const d = document.createElement('div'); d.className = 'cat';
-    d.innerHTML = `<img loading="lazy" src="${coverDi(id)}" alt="${cat.titolo}"><div class="t"><span class="badge">${n} schede · ${f} foto</span><h3>${cat.titolo}</h3><p>${cat.descr.slice(0, 120)}…</p></div>`;
+    const soon = n === 0;
+    const d = document.createElement('div');
+    d.className = 'cat' + (cat.sede === 'oristano' ? ' sede-or' : '') + (soon ? ' soon' : '');
+    const badge = soon ? 'In arrivo · Oristano' : `${n} schede · ${f} foto`;
+    d.innerHTML = `<img loading="lazy" src="${coverDi(id)}" alt="${cat.titolo}"><div class="t"><span class="badge${soon ? ' annuncio' : ''}">${badge}</span><h3>${cat.titolo}</h3><p>${cat.descr.slice(0, 120)}…</p></div>`;
     d.onclick = () => { filtroCat = filtroCat === id ? '' : id; syncFiltri(); };
     g.appendChild(d);
   });
@@ -97,13 +101,17 @@ function renderOggetti(){
   $('#conteggio').textContent = `— ${list.length} schede`;
   g.innerHTML = '';
   if(!list.length){
-    g.innerHTML = `<div class="vuoto"><p>Nessuna scheda trovata per questa ricerca.</p><button class="btn" id="azzera">Azzera i filtri</button></div>`;
+    const cat = filtroCat ? C.categorie[filtroCat] : null;
+    const attesa = cat && cat.prossimamente;
+    const msg = attesa ? 'Questa sala è in allestimento: le schede di Oristano arrivano con le prossime fotografie.' : 'Nessuna scheda trovata per questa ricerca.';
+    const btn = attesa ? 'Vedi le schede di Roma' : 'Azzera i filtri';
+    g.innerHTML = `<div class="vuoto"><p>${msg}</p><button class="btn" id="azzera">${btn}</button></div>`;
     $('#azzera').onclick = () => { filtroCat = ''; filtroRac = ''; filtroTipo = ''; query = ''; $('#q').value = ''; syncFiltri(); };
     return;
   }
   list.forEach(o => {
     const cat = C.categorie[o.categoria];
-    const d = document.createElement('div'); d.className = 'obj';
+    const d = document.createElement('div'); d.className = 'obj' + (cat.sede === 'oristano' ? ' sede-or' : '');
     d.innerHTML = `<img loading="lazy" src="${enc(o.foto[0])}" alt="${o.titolo}"><div class="t"><span class="badge">${cat.titolo} · ${etichettaMedia(o)}</span><h3><span class="cod">${o.codice || ''}</span> ${o.titolo}</h3><div class="meta">inv. ${o.info.inventario} · ${o.info.data_ingresso} · ${o.info.autore}</div><button class="btn">Apri scheda museo →</button></div>`;
     d.querySelector('img').onclick = () => apri(o.id);
     d.querySelector('.btn').onclick = () => apri(o.id);

@@ -64,6 +64,8 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
 6. **Casa e focolare** — Fumaioli da camino in biscotto di terracotta: dal
    torrino conico forato al grande fumaiolo figurato con uomo seduto.
    La ceramica oristanese oltre la mensa.
+7. **A Oristano** (sede Oristano, accento verde, in allestimento) — Le
+   ceramiche custodite a Oristano: in arrivo con le prossime fotografie.
 
 ## Gli oggetti (Catalogo ragionato · inv. 5206–5343)
 
