@@ -186,8 +186,8 @@ function apri(id){
   $('#scheda').innerHTML = `
     <h2><span class="cod big">${o.codice || ''}</span> ${o.titolo}</h2>
     <div class="sott">${cat.sede === 'oristano' ? '<span class="badge sede-or">Oristano</span>' : '<span class="badge sede-roma">Roma</span>'} <span class="badge">${cat.titolo}</span> · ${etichettaMedia(o)} in questa micro-sezione · vedute: ${tipi} · inv. <strong>${o.info.inventario}</strong></div>
-    <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}" alt="${o.titolo}"></div><div class="conta" id="contaFoto"></div><p class="didascalia" id="didascalia"></p></div>
-    <div class="thumbs" id="thumbs">${o.foto.map((f, i) => `<img data-i="${i}" class="${i === 0 ? 'on' : ''}" loading="lazy" src="${enc(f)}" title="${fotoTipo(f)} — ${f}">`).join('')}</div></div>
+    <div class="gal"><div class="main"><div id="mainBox"><img id="mainImg" src="${enc(o.foto[0])}" alt="${o.titolo}"></div><div class="conta" id="contaFoto"></div><p class="didascalia" id="didascalia"></p><p class="zoom-hint">Clicca sulla foto per ingrandirla a tutto schermo</p></div>
+    <div class="thumbs" id="thumbs">${o.foto.map((f, i) => `<img data-i="${i}" class="${i === 0 ? 'on' : ''}" loading="lazy" src="${enc(f)}" alt="${o.titolo} — ${fotoTipo(f)}" title="${fotoTipo(f)} — ${f}">`).join('')}</div></div>
     <div class="blocchi">
       <div class="blocco registro lungo"><h4>Descrizione d'inventario — registro comunale (trascrizione fedele)</h4><p class="cit">«${o.info.soggetto}»</p><p><span class="badge inv">inv. ${o.info.inventario}</span> <span class="badge">${o.info.oggetto}</span> <span class="badge">${o.info.materia}</span> <span class="badge">ingresso ${o.info.data_ingresso}</span> <span class="badge">racc. ${o.info.autore}</span></p></div>
       <div class="blocco lungo"><h4>Descrizione museo</h4><p>${gloss(o.info.descrizione)}</p><p><strong>Contesto:</strong> ${gloss(CONTESTI[o.categoria])}</p></div>
