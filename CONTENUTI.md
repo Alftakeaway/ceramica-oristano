@@ -565,7 +565,7 @@ proponi con orgoglio il tuo pezzo oristanese.
   Fotografie — Museo delle Civiltà di Roma e First Srl. Amministrazione comunale —
   Massimiliano Sanna (sindaco), Valentina de Seneen (assessora alle Attività
   produttive). Associazionismo — Pupa (Maria Giuseppina) Tarantini,
-  presidente Fidapa. Webmaster — Alfredo Forte. Riferimenti istituzionali:
+  presidente Fidapa Oristano. Webmaster — Alfredo Forte. Riferimenti istituzionali:
   Museo delle Civiltà di Roma, Comune di Oristano, Antiquarium Arborense, Oristano
   Città della Ceramica (AiCC).
 - **Come è fatto:** Trascrizione fedele — ogni scheda riporta tra

@@ -66,6 +66,6 @@ Ad ogni modifica di CSS/JS alza il versionante in `index.html`
 - Fotografie — Museo delle Civiltà di Roma e First Srl
 - Amministrazione comunale — Massimiliano Sanna (sindaco), Valentina de
   Seneen (assessora Attività produttive)
-- Associazionismo — Pupa Tarantini (presidente Fidapa)
+- Associazionismo — Pupa Tarantini (presidente Fidapa Oristano)
 - Webmaster — Alfredo Forte
 - Riferimenti — Comune di Oristano, Antiquarium Arborense, AiCC
