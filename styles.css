@@ -158,6 +158,16 @@ a{color:var(--bronze-hi)}
 .facts dd{margin:0;font-size:15.5px;font-style:italic;color:var(--perg)}
 .nota{font-size:13px;font-style:italic;color:#4a3a26;margin:12px 0 0;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:10px 14px}
 
+/* ---------- strip capolavori dopo la hero ---------- */
+.capolavori{overflow:hidden;margin:10px 0 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:rgba(60,30,5,.14)}
+.capolavori-track{display:flex;width:max-content;animation:scorri 45s linear infinite;padding:12px 0}
+.capolavori:hover .capolavori-track,.capolavori:focus-within .capolavori-track{animation-play-state:paused}
+.capolavori-track a{flex:0 0 auto;margin-right:14px}
+.capolavori-track img{height:190px;width:auto;display:block;border:1px solid var(--line);border-radius:4px;object-fit:cover;background:var(--ink-2)}
+.capolavori-doppio{display:contents}
+@keyframes scorri{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.capolavori{overflow-x:auto}.capolavori-track{animation:none}}
+
 /* ---------- storia ---------- */
 .storia{padding-top:30px}
 .storia-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:28px;align-items:start}
@@ -305,6 +315,7 @@ section > h2.sec{
 .vuoto .btn{max-width:300px;width:100%;margin:0 auto}
 /* contatore foto in scheda */
 .main{position:relative}
+.lente{position:absolute;width:170px;height:170px;border-radius:50%;border:2px solid var(--bronze);background-repeat:no-repeat;display:none;pointer-events:none;z-index:3;box-shadow:0 6px 24px rgba(0,0,0,.35)}
 .conta{
   position:absolute;right:10px;bottom:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;
   background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--bone);
@@ -539,7 +550,7 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   @page{margin:15mm}
   body{background:#fff;color:#111;font-size:12pt}
   body::before,body::after{display:none !important}
-  .topbar,.commandbar,.meandro,.chips,.rail-nav,.topnav,.thumbs,.x,.btn,.btn-link,.conta,.firma,.mestiere,.mappa-wrap,.hero-card,.perc-grid,.modal,.lightbox,#condividi,.gioco,.cta-row{display:none !important}
+  .topbar,.commandbar,.meandro,.chips,.rail-nav,.topnav,.thumbs,.x,.btn,.btn-link,.conta,.firma,.mestiere,.mappa-wrap,.hero-card,.perc-grid,.modal,.lightbox,#condividi,.gioco,.cta-row,.capolavori{display:none !important}
   .wrap{max-width:none}
   .hero{display:block;padding:0}
   .hero-text h2,.sec{color:#111}

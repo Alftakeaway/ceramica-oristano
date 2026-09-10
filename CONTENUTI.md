@@ -28,6 +28,8 @@ Le schede CO001–CO025 vivono in `catalog.js`; qui sono trascritte per lettura.
   registro d'inventario** (Comune di Oristano, coll. Clemente 1911 /
   Loria-Milano   1908) e una nota sulla tradizione dei *figoli*.
 - **Bottoni hero:** Vedi dove siamo (→ mappa) · Proponi un oggetto (→ prestiti)
+- **Strip capolavori:** 8 foto in scorrimento dopo la hero, click → scheda
+- **Lente zoom:** nelle schede, lente 2x al passaggio del mouse (più lightbox fullscreen al click)
 - **Card "Il percorso":** 6 sale — spose, uso quotidiano, acqua e cucina,
   figure, focolare, depositi · 25 schede d'inventario con trascrizione fedele
   del registro · 39 fotografie — insiemi, dettagli, fondi e scritte

@@ -147,6 +147,27 @@ function gloss(t){
 let corrente = null, idxFoto = 0, ultimoFuoco = null;
 function didascaliaDi(o, i){ return `${fotoTipo(o.foto[i])} — ${i + 1} di ${o.foto.length}`; }
 function bindMain(){ const m = $('#mainImg'); if(m){ m.style.cursor = 'zoom-in'; m.onclick = () => apriLightbox(); } }
+/* lente d'ingrandimento 2x sulla foto della scheda (solo mouse) */
+function lente(img){
+  const main = img.closest('.main'); if(!main) return;
+  const vecchia = main.querySelector('.lente'); if(vecchia) vecchia.remove();
+  if(!window.matchMedia || !matchMedia('(pointer:fine)').matches) return;
+  const z = 2, diam = 170;
+  const lens = document.createElement('div'); lens.className = 'lente'; lens.setAttribute('aria-hidden', 'true');
+  main.appendChild(lens);
+  img.addEventListener('mousemove', e => {
+    const r = img.getBoundingClientRect(), m = main.getBoundingClientRect();
+    const x = Math.max(0, Math.min(e.clientX - r.left, r.width));
+    const y = Math.max(0, Math.min(e.clientY - r.top, r.height));
+    lens.style.left = (e.clientX - m.left - diam / 2) + 'px';
+    lens.style.top = (e.clientY - m.top - diam / 2) + 'px';
+    lens.style.backgroundImage = `url('${img.src}')`;
+    lens.style.backgroundSize = `${r.width * z}px ${r.height * z}px`;
+    lens.style.backgroundPosition = `-${x * z - diam / 2}px -${y * z - diam / 2}px`;
+    lens.style.display = 'block';
+  });
+  img.addEventListener('mouseleave', () => { lens.style.display = 'none'; });
+}
 function apriLightbox(){
   const o = corrente; if(!o) return;
   $('#lbImg').src = enc(o.foto[idxFoto]);
@@ -172,6 +193,7 @@ function mostraFoto(i){
   const c = $('#contaFoto'); if(c) c.textContent = `${idxFoto + 1} / ${o.foto.length}`;
   const dc = $('#didascalia'); if(dc) dc.textContent = didascaliaDi(o, idxFoto);
   bindMain();
+  lente(document.getElementById('mainImg'));
 }
 function chiudiScheda(){
   $('#modal').classList.remove('open');
