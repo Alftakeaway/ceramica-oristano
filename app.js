@@ -243,7 +243,7 @@ function apri(id){
       <h4>Nota di catalogo</h4><p>Scheda compilata incrociando le foto con il file «Ceramiche Oristano.xlsx» (inventari 5206–5343 e oltre). Le foto mostrano spesso più pezzi insieme: l'attribuzione all'inventario segue la descrizione più vicina per forma, vetrina e scritte visibili (es. «5313» sul fondo dello scolapasta, «EFISIO» sul cantaro). Verificare dal vivo misure, marchi e stato conservativo.</p>
       <h4>Le foto di questa scheda</h4><ul>${o.foto.map(f => `<li><strong>${fotoTipo(f)}</strong> — ${f}</li>`).join('')}</ul>
       </details>
-      <div class="blocco lungo vedi"><h4>Vedi anche</h4><p>${C.oggetti.filter(x => x.categoria === o.categoria && x.id !== o.id).slice(0, 3).map(x => `<a href="#scheda-${x.id}">${x.codice} — ${x.titolo}</a>`).join(' · ')}</p><button class="btn" id="condividi">Condividi questa scheda</button></div>
+      <div class="blocco lungo vedi"><h4>Vedi anche</h4><p>${C.oggetti.filter(x => x.categoria === o.categoria && x.id !== o.id).slice(0, 3).map(x => `<a href="#scheda-${x.id}">${x.codice} — ${x.titolo}</a>`).join(' · ')}</p><button class="btn" id="condividi">Condividi questa scheda</button> <button class="btn" id="cita">Cita questa scheda</button></div>
     </div>`;
   document.querySelectorAll('#thumbs [data-i]').forEach(im => im.onclick = () => mostraFoto(+im.dataset.i));
   const cc = $('#crumbCat');
@@ -258,6 +258,16 @@ function apri(id){
       sh.textContent = 'Link copiato negli appunti';
       setTimeout(() => { sh.textContent = 'Condividi questa scheda'; }, 2500);
     }catch(_){ sh.textContent = 'Copia il link dalla barra del browser'; }
+  };
+  const ci = $('#cita');
+  if(ci) ci.onclick = async () => {
+    const d = new Date().toLocaleDateString('it-IT');
+    const cit = `${o.titolo}, inv. ${o.info.inventario} (${o.info.oggetto}, ${o.info.materia}, ingresso ${o.info.data_ingresso} — racc. ${o.info.autore}), in Ceramica Oristano — Museo della Ceramica (reperti al Museo delle Civiltà di Roma), ${location.href} (consultato il ${d}).`;
+    try{
+      await navigator.clipboard.writeText(cit);
+      ci.textContent = 'Citazione copiata negli appunti';
+      setTimeout(() => { ci.textContent = 'Cita questa scheda'; }, 2500);
+    }catch(_){ ci.textContent = 'Seleziona e copia il link dalla barra'; }
   };
   ultimoFuoco = document.activeElement;
   $('#modal').classList.add('open'); $('#modal').setAttribute('aria-hidden', 'false');
