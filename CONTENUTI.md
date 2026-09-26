@@ -476,9 +476,12 @@ i 25 pezzi del Museo delle Civiltà di Roma, **Oristano** (verde) per i futuri.
 La storia di una brocca della sposa, dalla fornace al Museo delle Civiltà di Roma, in cinque tappe:
 
 1. **La nascita** — nel quartiere dei figoli, intorno al 1910. Il vasaietto lavora
-   l'argilla del Tirso, la foggia al tornio, applica angeli e fiori.
+   l'argilla del Tirso, la foggia al tornio, applica angeli e fiori. In inverno,
+   quando il freddo impediva lavorare al tornio, i figoli restavano a casa e
+   realizzavano con pazienza le decorazioni a rilievo — angioletti, fiori, corone.
 2. **Il regalo** — una famiglia la acquista per il matrimonio della figlia. Non serve a
-   contenere nulla: è un simbolo, si mostra agli ospiti.
+   contenere nulla: è un simbolo, si mostra agli ospiti. Era un'antica cantarella
+   oristanese, documentata già nello Statuto degli Alfareros del 1692.
 3. **Il viaggio a Roma** — nel 1911 Gavino Clemente la raccoglie per la Mostra di
    Etnografia Italiana. A Piazza d'Armi, nel Padiglione della Sardegna.
 4. **Il deposito** — chiusa l'Esposizione, la brocca resta a Roma, nel Museo delle
