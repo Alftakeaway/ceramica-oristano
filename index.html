@@ -357,56 +357,73 @@
   <div class="confronto-grid" id="confronto-grid"></div>
 </section>
 
-<section class="wrap storie-sez" id="storie" aria-labelledby="tit-storie">
+<section class="wrap storie-sez" id="condividi-sez" aria-labelledby="tit-storie">
   <div class="sec-row">
     <div class="sec-head">
       <p class="sec-over">La collezione cresce</p>
-      <h2 class="sec" id="tit-storie">Storie dalla comunità</h2>
+      <h2 class="sec" id="tit-storie">La collezione cresce</h2>
     </div>
   </div>
   <p class="storie-intro">Il museo è fatto anche delle storie di chi possiede una ceramica oristanese. Raccontala qui: la fotouseremo solo con il tuo consenso.</p>
-  <div class="storie-form-box">
-    <form id="storie-form" class="storie-form">
-      <div class="storie-riga">
-        <label>Il tuo nome
-          <input type="text" id="storie-nome" required placeholder="Es. Maria S.">
+
+  <div class="sotto-sezione">
+    <h3 class="sotto-titolo">Racconta la tua storia</h3>
+    <div class="storie-form-box">
+      <form id="storie-form" class="storie-form">
+        <div class="storie-riga">
+          <label>Il tuo nome
+            <input type="text" id="storie-nome" required placeholder="Es. Maria S.">
+          </label>
+          <label>La tua città
+            <input type="text" id="storie-citta" placeholder="Es. Oristano">
+          </label>
+        </div>
+        <label>Il titolo del racconto
+          <input type="text" id="storie-titolo" required placeholder="Es. Il frascu di mia nonna">
         </label>
-        <label>La tua città
-          <input type="text" id="storie-citta" placeholder="Es. Oristano">
+        <label>La storia
+          <textarea id="storie-testo" rows="4" required placeholder="Racconta la storia del pezzo: da dove viene, come è arrivato in famiglia, ricordi legati..."></textarea>
         </label>
+        <div class="storie-riga">
+          <label>La tua email (non verrà pubblicata)
+            <input type="email" id="storie-email" required placeholder="nome@esempio.it">
+          </label>
+          <label>Foto (opzionale, verrà richiesta via email)
+            <input type="file" id="storie-foto" accept="image/*">
+          </label>
+        </div>
+        <button type="submit" class="btn storie-invia">Invia la storia</button>
+        <p class="storie-nota">Le storie vengono pubblicate dopo revisione del curatore. Riceverai un'email di conferma.</p>
+      </form>
+      <div id="storie-confirm" class="storie-confirm" hidden>
+        <strong>Grazie!</strong> La tua storia è stata registrata. La pubblicheremo dopo revisione.
       </div>
-      <label>Il titolo del racconto
-        <input type="text" id="storie-titolo" required placeholder="Es. Il frascu di mia nonna">
-      </label>
-      <label>La storia
-        <textarea id="storie-testo" rows="4" required placeholder="Racconta la storia del pezzo: da dove viene, come è arrivato in famiglia, ricordi legati..."></textarea>
-      </label>
-      <div class="storie-riga">
-        <label>La tua email (non verrà pubblicata)
-          <input type="email" id="storie-email" required placeholder="nome@esempio.it">
-        </label>
-        <label>Foto (opzionale, verrà richiesta via email)
-          <input type="file" id="storie-foto" accept="image/*">
-        </label>
-      </div>
-      <button type="submit" class="btn storie-invia">Invia la storia</button>
-      <p class="storie-nota">Le storie vengono pubblicate dopo revisione del curatore. Riceverai un'email di conferma.</p>
-    </form>
-    <div id="storie-confirm" class="storie-confirm" hidden>
-      <strong>Grazie!</strong> La tua storia è stata registrata. La pubblicheremo dopo revisione.
+    </div>
+    <div class="storie-lista" id="storie-lista">
+      <article class="storia-card">
+        <h3>Il frascu di nonna Regina</h3>
+        <p class="storia-meta">Maria S. · Oristano</p>
+        <p>Nonna Regina teneva questo frascu sul davanzale della cucina. Diceva che era arrivato dalla Sardegna con la valigia del matrimonio, nel 1952. L'acqua ci si manteneva fresca d'estate, e quando eravamo noi bambini ci faceva bere un sorso dopo le partite in piazza. Oggi è nel soggiorno, fiori secchi dentro, e quando lo guardo sento ancora la voce di nonna.</p>
+      </article>
+      <article class="storia-card">
+        <h3>La brocca del balcone</h3>
+        <p class="storia-meta">Giovanni T. · Milano</p>
+        <p>Mio padre l'ha portata a Milano quando si è trasferito nel 1968. Diceva: "Questa resta in balcone, anche se qui non c'è il sole di Oristano". Per anni i fiori secchi ci hanno fatto compagnia. Dopo la morte di mio padre, l'ho messa in cucina, dove la vedeva ogni giorno. È ancora qui, con il suo musetto colorado.</p>
+      </article>
     </div>
   </div>
-  <div class="storie-lista" id="storie-lista">
-    <article class="storia-card">
-      <h3>Il frascu di nonna Regina</h3>
-      <p class="storia-meta">Maria S. · Oristano</p>
-      <p>Nonna Regina teneva questo frascu sul davanzale della cucina. Diceva che era arrivato dalla Sardegna con la valigia del matrimonio, nel 1952. L'acqua ci si manteneva fresca d'estate, e quando eravamo noi bambini ci faceva bere un sorso dopo le partite in piazza. Oggi è nel soggiorno, fiori secchi dentro, e quando lo guardo sento ancora la voce di nonna.</p>
-    </article>
-    <article class="storia-card">
-      <h3>La brocca del balcone</h3>
-      <p class="storia-meta">Giovanni T. · Milano</p>
-      <p>Mio padre l'ha portata a Milano quando si è trasferito nel 1968. Diceva: "Questa resta in balcone, anche se qui non c'è il sole di Oristano". Per anni i fiori secchi ci hanno fatto compagnia. Dopo la morte di mio padre, l'ho messa in cucina, dove la vedeva ogni giorno. È ancora qui, con il suo musetto colorato.</p>
-    </article>
+
+  <div class="sotto-sezione">
+    <h3 class="sotto-titolo">Proponi un oggetto</h3>
+    <p class="gioco-intro">Hai in casa una ceramica oristanese? La prossima sala del museo si costruisce con i pezzi della comunità: in prestito per le mostre o condivisi con fotografie.</p>
+    <ol class="passi">
+      <li><strong>Fotografa</strong><span>Insieme, dettagli, fondi e scritte, a luce naturale.</span></li>
+      <li><strong>Racconta</strong><span>Misure, provenienza e storia del pezzo in famiglia.</span></li>
+      <li><strong>Invia</strong><span>Scrivi al curatore allegando foto e descrizione.</span></li>
+    </ol>
+    <div class="cta-row">
+      <a class="btn btn-link" href="mailto:alfredoforte.web@gmail.com?subject=Ceramica%20Oristano%20%E2%80%94%20propongo%20un%20oggetto&body=Titolo%2Foggetto%3A%0AMisure%3A%0AProvenienza%3A%0AFoto%20allegate%3A%20si%2Fno">Proponi un oggetto</a>
+    </div>
   </div>
 </section>
 
@@ -670,24 +687,6 @@
     <li><strong>Corro con un fantoccio in groppa.</strong> Un tempo stavo sui tetti a portare fortuna… <a href="#scheda-cavallo-fantoccio-5206">Scopri la risposta →</a></li>
     <li><strong>Sono un camino con un omino seduto in cima.</strong> Tre pezzi di terracotta… <a href="#scheda-fumaiolo-uomo-seduto-5212">Scopri la risposta →</a></li>
   </ol>
-</section>
-
-<section class="wrap prestiti" id="condividi-sez" aria-labelledby="tit-prestiti">
-  <div class="sec-row">
-    <div class="sec-head">
-      <p class="sec-over">La collezione cresce</p>
-      <h2 class="sec" id="tit-prestiti">Presta o condividi un pezzo</h2>
-    </div>
-  </div>
-  <p class="gioco-intro">Hai in casa una ceramica oristanese? La prossima sala del museo si costruisce con i pezzi della comunità: in prestito per le mostre o condivisi con fotografie.</p>
-  <ol class="passi">
-    <li><strong>Fotografa</strong><span>Insieme, dettagli, fondi e scritte, a luce naturale.</span></li>
-    <li><strong>Racconta</strong><span>Misure, provenienza e storia del pezzo in famiglia.</span></li>
-    <li><strong>Invia</strong><span>Scrivi al curatore allegando foto e descrizione.</span></li>
-  </ol>
-  <div class="cta-row">
-    <a class="btn btn-link" href="mailto:alfredoforte.web@gmail.com?subject=Ceramica%20Oristano%20%E2%80%94%20propongo%20un%20oggetto&body=Titolo%2Foggetto%3A%0AMisure%3A%0AProvenienza%3A%0AFoto%20allegate%3A%20si%2Fno">Proponi un oggetto</a>
-  </div>
 </section>
 
 <section class="wrap mappa-sez" id="mappa-sez" aria-labelledby="tit-mappa">

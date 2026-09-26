@@ -624,6 +624,9 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
 /* ---------- storie dalla comunità ---------- */
 .storie-sez{padding-top:30px}
 .storie-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:16px 20px;margin:0 0 20px}
+.sotto-sezione{margin-top:28px;padding-top:24px;border-top:1px solid var(--line-soft)}
+.sotto-sezione:first-of-type{margin-top:0;padding-top:0;border-top:none}
+.sotto-titolo{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin:0 0 14px}
 .storie-form-box{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:22px 24px;margin-bottom:24px}
 .storie-form{display:grid;gap:14px}
 .storie-riga{display:grid;grid-template-columns:1fr 1fr;gap:14px}

@@ -494,10 +494,15 @@ Due menu a tendina per selezionare due oggetti del catalogo e vederli fianco a
 fianco, con foto, dati e descrizione. Utile per confrontare forme, colori e
 funzioni.
 
-## Storie dalla comunità
+## La collezione cresce (sezione unificata)
 
+### Racconta la tua storia
 Form per inviare storie personali su ceramiche oristanesi in famiglia, con
 pubblicazione dopo revisione del curatore. Due storie esempio sono già visibili.
+
+### Proponi un oggetto
+3 passi per proporre un oggetto da aggiungere al catalogo: fotografa, racconta,
+invia via email. La prossima sala del museo si costruisce con i pezzi della comunità.
 
 ## Centro Risorse per le scuole
 
