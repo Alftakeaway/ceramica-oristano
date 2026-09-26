@@ -469,6 +469,38 @@ i 25 pezzi del Museo delle Civiltà di Roma, **Oristano** (verde) per i futuri.
    Museo delle Civiltà di Roma e con il Comune ne digitalizza i contenuti.
 5. **Domani — Oristano + comunità:** nuove schede e prestiti condivisi.
 
+*Interattiva: cliccando su ogni tappa si apre un dettaglio con la storia completa.*
+
+## Il viaggio della sposa (Racconto a tappe)
+
+La storia di una brocca della sposa, dalla fornace al Museo delle Civiltà di Roma, in cinque tappe:
+
+1. **La nascita** — nel quartiere dei figoli, intorno al 1910. Il vasaietto lavora
+   l'argilla del Tirso, la foggia al tornio, applica angeli e fiori.
+2. **Il regalo** — una famiglia la acquista per il matrimonio della figlia. Non serve a
+   contenere nulla: è un simbolo, si mostra agli ospiti.
+3. **Il viaggio a Roma** — nel 1911 Gavino Clemente la raccoglie per la Mostra di
+   Etnografia Italiana. A Piazza d'Armi, nel Padiglione della Sardegna.
+4. **Il deposito** — chiusa l'Esposizione, la brocca resta a Roma, nel Museo delle
+   Civiltà, per oltre un secolo.
+5. **Il ritorno** — oggi è digitalizzata, fotografata, raccontata online.
+
+## Oggetti a confronto
+
+Due menu a tendina per selezionare due oggetti del catalogo e vederli fianco a
+fianco, con foto, dati e descrizione. Utile per confrontare forme, colori e
+funzioni.
+
+## Storie dalla comunità
+
+Form per inviare storie personali su ceramiche oristanesi in famiglia, con
+pubblicazione dopo revisione del curatore. Due storie esempio sono già visibili.
+
+## Centro Risorse per le scuole
+
+Sei card con risorse per la classe: schede didattiche, attività creative, testi
+semplici per bambini, caccia al tesoro, visita guidata, percorsi interdisciplinari.
+
 ## Il mestiere e le forme (Forme del catalogo / Brocche, fraschi, cantari)
 
 Le stesse famiglie di oggetti che ritrovi nelle sale: l'anfora nuziale a

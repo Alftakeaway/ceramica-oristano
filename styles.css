@@ -564,6 +564,134 @@ footer{margin-top:48px;border-top:2px solid var(--line);background:var(--ink);po
   .lb-nav{width:42px;height:42px;font-size:24px}
 }
 
+/* ---------- timeline interattiva ---------- */
+.tl-item{cursor:pointer;transition:background .15s}
+.tl-item:hover{background:var(--ink-2)}
+.tl-detail{
+  display:none;font-size:14.5px;font-style:normal;color:var(--perg);
+  margin-top:8px;padding:10px 12px;background:var(--ink-2);
+  border-left:3px solid var(--terra);border-radius:2px;line-height:1.55;
+}
+.tl-detail.open{display:block}
+.tl-item.futuro .tl-detail{border-left-color:var(--verde)}
+
+/* ---------- viaggio della sposa ---------- */
+.viaggio-sposa{padding-top:30px}
+.viaggio-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:16px 20px;margin:0 0 20px}
+.viaggio-tappe{list-style:none;margin:0;padding:0;display:grid;gap:16px;counter-reset:tappa}
+.viaggio-tappe li{
+  display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;
+  background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:20px 22px;
+  border-left:4px solid var(--terra);
+}
+.tappa-num{
+  font-family:var(--display);font-size:32px;font-weight:700;color:var(--terra);
+  border-right:1px solid var(--line-soft);padding-right:16px;text-align:center;
+}
+.tappa-content h3{margin:0 0 6px;font-size:21px;font-weight:600;color:#1a1206}
+.tappa-content p{margin:0 0 10px;font-size:16px;color:#241a0e;line-height:1.6}
+.tappa-link{
+  display:inline-block;font-family:var(--sans);font-size:12px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--bronze-hi);
+  text-decoration:none;border-bottom:1px solid var(--bronze);padding-bottom:2px;
+}
+.tappa-link:hover{color:var(--terra);border-color:var(--terra)}
+
+/* ---------- confronto oggetti ---------- */
+.confronto-sez{padding-top:30px}
+.confronto-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:16px 20px;margin:0 0 20px}
+.confronto-controls{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap;margin-bottom:20px}
+.confronto-label{display:grid;gap:6px;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.confronto-select{
+  font-family:var(--body);font-size:16px;color:var(--bone);
+  background:#fff;border:1px solid var(--line);border-radius:2px;padding:10px 12px;min-width:280px;
+}
+.confronto-vs{
+  font-family:var(--display);font-size:22px;font-weight:700;color:var(--terra);
+  padding-bottom:10px;
+}
+.confronto-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.confronto-card{
+  background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:18px 20px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.confronto-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);border-radius:2px;background:var(--ink-2)}
+.confronto-card h4{margin:0;font-size:19px;font-weight:600;color:#1a1206}
+.confronto-meta{font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--mut);margin:0}
+.confronto-desc{font-size:15px;color:var(--perg);margin:0;line-height:1.55}
+.confronto-card .btn{margin-top:auto;align-self:flex-start}
+
+/* ---------- storie dalla comunità ---------- */
+.storie-sez{padding-top:30px}
+.storie-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:16px 20px;margin:0 0 20px}
+.storie-form-box{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:22px 24px;margin-bottom:24px}
+.storie-form{display:grid;gap:14px}
+.storie-riga{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.storie-form label{display:grid;gap:6px;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.storie-form input,.storie-form textarea{
+  font-family:var(--body);font-size:16px;color:var(--bone);
+  background:#fff;border:1px solid var(--line);border-radius:2px;padding:10px 12px;
+}
+.storie-form textarea{resize:vertical}
+.storie-invia{max-width:280px}
+.storie-nota{font-size:13px;font-style:italic;color:var(--faint);margin:0}
+.storie-confirm{
+  background:var(--ink-2);border:1px solid var(--verde);border-left:4px solid var(--verde);
+  border-radius:4px;padding:14px 18px;font-size:15px;color:var(--bone);
+}
+.storie-lista{display:grid;gap:16px}
+.storia-card{
+  background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:18px 20px;
+  border-left:4px solid var(--bronze);
+}
+.storia-card h3{margin:0 0 4px;font-size:19px;font-weight:600;color:#1a1206}
+.storia-meta{font-family:var(--sans);font-size:12px;letter-spacing:.08em;color:var(--mut);margin:0 0 8px}
+.storia-card p:last-child{margin:0;font-size:15.5px;color:#241a0e;line-height:1.6}
+
+/* ---------- centro risorse per le scuole ---------- */
+.scuole-sez{padding-top:30px}
+.scuole-intro{font-size:17px;font-style:italic;color:#3d2f1d;max-width:70ch;background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:16px 20px;margin:0 0 20px}
+.scuole-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.scuola-card{
+  background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:18px 20px;
+  display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--bronze);
+}
+.scuola-card h3{margin:0;font-size:18px;font-weight:600;color:#1a1206}
+.scuola-card p{margin:0;font-size:15px;color:var(--perg);line-height:1.55;flex:1}
+.scuola-link{
+  font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--bronze-hi);text-decoration:none;
+  border-bottom:1px solid var(--bronze);padding-bottom:2px;align-self:flex-start;
+}
+.scuola-link:hover{color:var(--terra);border-color:var(--terra)}
+
+/* ---------- social icons ---------- */
+.social-row{display:flex;gap:10px;flex-wrap:wrap}
+.social-icons{display:flex;gap:8px;margin-top:10px}
+.social-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:50%;text-decoration:none;
+  font-family:var(--sans);font-size:14px;font-weight:700;color:#fff;
+  transition:transform .15s;
+}
+.social-icon:hover{transform:translateY(-2px)}
+.social-icon.fb{background:#1877f2}
+.social-icon.tw{background:#000}
+.social-icon.wa{background:#25d366}
+
+/* ---------- responsive nuove sezioni ---------- */
+@media(max-width:960px){
+  .confronto-grid{grid-template-columns:1fr}
+  .scuole-grid{grid-template-columns:1fr 1fr}
+  .storie-riga{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .scuole-grid{grid-template-columns:1fr}
+  .viaggio-tappe li{grid-template-columns:1fr;gap:10px}
+  .tappa-num{border-right:none;border-bottom:1px solid var(--line-soft);padding:0 0 8px;text-align:left}
+  .confronto-select{min-width:100%}
+}
+
 /* ---------- stampa: catalogo pulito su carta ---------- */
 @media print{
   @page{margin:15mm}
